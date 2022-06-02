@@ -1,0 +1,2 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter04\Exercise02\obj\Debug\Exercise02.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter04\Exercise02\obj\Debug\Exercise02.csproj.AssemblyReference.cache
