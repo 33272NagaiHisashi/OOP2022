@@ -47,14 +47,15 @@ namespace Exercise01 {
 		}
 
 		private static void Exercise1_4(int[] numbers) {
-			var asc = numbers.OrderBy(n => n).Take(2);
+			var asc = numbers.OrderBy(n => n).Take(3);
 			foreach (var a in asc) {
 				Console.WriteLine(a);
 			}
 		}
 
 		private static void Exercise1_5(int[] numbers) {
-
+			var distinct = numbers.Distinct().Where(n => n > 10).Count();
+			Console.WriteLine(distinct);
 		}
 	}
 }
