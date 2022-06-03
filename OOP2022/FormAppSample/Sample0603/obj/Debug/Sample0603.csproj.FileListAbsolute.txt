@@ -1,0 +1,10 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\bin\Debug\Sample0603.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\bin\Debug\Sample0603.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\bin\Debug\Sample0603.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\Sample0603\obj\Debug\Sample0603.Form1.resources
