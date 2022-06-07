@@ -14,8 +14,9 @@ namespace Sample0603 {
 			InitializeComponent();
 		}
 
-		private void button1_Click(object sender, EventArgs e) {
-
+		private void btPush_Click(object sender, EventArgs e) {
+			//tbAns.Text = (int.Parse(tbSuu1.Text) + int.Parse(tbSuu2.Text)).ToString();
+			nudAns.Value = nud1.Value + nud2.Value;
 		}
 	}
 }
