@@ -197,12 +197,14 @@ namespace AddressBook {
 			this.btAddPerson.TabIndex = 4;
 			this.btAddPerson.Text = "追加";
 			this.btAddPerson.UseVisualStyleBackColor = true;
+			this.btAddPerson.Click += new System.EventHandler(this.btAddPerson_Click);
 			// 
 			// pbPicture
 			// 
 			this.pbPicture.Location = new System.Drawing.Point(646, 25);
 			this.pbPicture.Name = "pbPicture";
 			this.pbPicture.Size = new System.Drawing.Size(114, 168);
+			this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pbPicture.TabIndex = 5;
 			this.pbPicture.TabStop = false;
 			// 
@@ -214,6 +216,7 @@ namespace AddressBook {
 			this.btPictureOpen.TabIndex = 6;
 			this.btPictureOpen.Text = "開く...";
 			this.btPictureOpen.UseVisualStyleBackColor = true;
+			this.btPictureOpen.Click += new System.EventHandler(this.btPictureOpen_Click);
 			// 
 			// btPictureClear
 			// 
@@ -223,6 +226,7 @@ namespace AddressBook {
 			this.btPictureClear.TabIndex = 6;
 			this.btPictureClear.Text = "クリア";
 			this.btPictureClear.UseVisualStyleBackColor = true;
+			this.btPictureClear.Click += new System.EventHandler(this.btPictureClear_Click);
 			// 
 			// ofdFileOpenDialog
 			// 
