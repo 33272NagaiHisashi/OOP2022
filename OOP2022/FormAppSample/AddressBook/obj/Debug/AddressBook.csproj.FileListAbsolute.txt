@@ -1,0 +1,10 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.Form1.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\AddressBook\obj\Debug\AddressBook.pdb
