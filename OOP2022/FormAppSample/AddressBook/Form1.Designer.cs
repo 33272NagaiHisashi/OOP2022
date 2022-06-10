@@ -102,10 +102,13 @@ namespace AddressBook {
 			// 
 			this.dgvPersons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvPersons.Location = new System.Drawing.Point(35, 325);
+			this.dgvPersons.MultiSelect = false;
 			this.dgvPersons.Name = "dgvPersons";
 			this.dgvPersons.RowTemplate.Height = 21;
+			this.dgvPersons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvPersons.Size = new System.Drawing.Size(725, 150);
 			this.dgvPersons.TabIndex = 1;
+			this.dgvPersons.Click += new System.EventHandler(this.dgvPersons_Click);
 			// 
 			// tbName
 			// 
@@ -151,6 +154,7 @@ namespace AddressBook {
 			// cbFamily
 			// 
 			this.cbFamily.AutoSize = true;
+			this.cbFamily.Cursor = System.Windows.Forms.Cursors.Default;
 			this.cbFamily.Location = new System.Drawing.Point(223, 278);
 			this.cbFamily.Name = "cbFamily";
 			this.cbFamily.Size = new System.Drawing.Size(48, 16);
