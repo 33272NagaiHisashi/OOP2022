@@ -62,10 +62,6 @@ namespace Test02 {
 			foreach (var b in between) {
                 Console.Write(b + " ");
 			}
-            numbers[0] = 1;
-            foreach (var b in between) {
-                Console.Write(b + " ");
-            }
         }
     }
 }
