@@ -33,7 +33,12 @@ namespace AddressBook {
 				listGroup = GetCheckBoxGroup(),
 			};
 			listPerson.Add(newPerson);
-			int index = dgvPersons.CurrentRow.Index;
+			dgvPersons.Rows[dgvPersons.RowCount - 1].Selected = true;
+
+			if (listPerson.Count() > 0) {
+				btUpdate.Enabled = true;
+				btDelete.Enabled = true;
+			}
 		}
 
 		private void btUpdate_Click(object sender, EventArgs e) {
@@ -62,9 +67,16 @@ namespace AddressBook {
 		private void btDelete_Click(object sender, EventArgs e) {
 			if (dgvPersons.CurrentRow == null) return;
 
+			if (listPerson.Count() == 0) {
+				btDelete.Enabled = false;
+				btUpdate.Enabled = false;
+			}
+
 			/*int index = dgvPersons.CurrentRow.Index;
 			listPerson.RemoveAt(index);*/
 			listPerson.RemoveAt(dgvPersons.CurrentRow.Index);
+			dgvPersons.Rows[dgvPersons.RowCount - 1].Selected = true;
+			
 		}
 
 		//チェックボックスにセットされている値をリストとして取り出す
@@ -129,6 +141,11 @@ namespace AddressBook {
 
 		private void groupCheckBoxAllClear() {
 		cbFamily.Checked = cbFriend.Checked = cbWork.Checked = cbOther.Checked = false;
+		}
+
+		private void Form1_Load(object sender, EventArgs e) {
+			btUpdate.Enabled = false;
+			btDelete.Enabled = false;
 		}
 	}
 }

@@ -103,6 +103,7 @@ namespace AddressBook {
 			// dgvPersons
 			// 
 			this.dgvPersons.AllowUserToAddRows = false;
+			this.dgvPersons.AllowUserToDeleteRows = false;
 			this.dgvPersons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvPersons.Location = new System.Drawing.Point(35, 325);
 			this.dgvPersons.MultiSelect = false;
@@ -290,6 +291,7 @@ namespace AddressBook {
 			this.Controls.Add(this.label1);
 			this.Name = "Form1";
 			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvPersons)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
 			this.ResumeLayout(false);
