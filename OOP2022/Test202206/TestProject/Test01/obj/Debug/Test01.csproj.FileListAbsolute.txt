@@ -14,3 +14,7 @@ C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.csprojAssemblyRe
 C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.csproj.CoreCompileInputs.cache
 C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.exe
 C:\Users\n_uchiyama\Desktop\TestProject\Test01\obj\Debug\Test01.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Test202206\TestProject\Test01\obj\Debug\Test01.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Test202206\TestProject\Test01\obj\Debug\Test01.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Test202206\TestProject\Test01\obj\Debug\Test01.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Test202206\TestProject\Test01\obj\Debug\Test01.pdb
