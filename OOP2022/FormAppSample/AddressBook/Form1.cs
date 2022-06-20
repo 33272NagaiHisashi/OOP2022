@@ -24,11 +24,15 @@ namespace AddressBook {
 		}
 
 		private void btAddPerson_Click(object sender, EventArgs e) {
+			if (String.IsNullOrEmpty(tbName.Text)) {
+				MessageBox.Show("氏名が入力されていません");
+				return;
+			}
 			Person newPerson = new Person {
 				Name = tbName.Text,
 				MailAddress = tbMailAddress.Text,
 				Address = tbAddress.Text,
-				Company = tbCompany.Text,
+				Company = cbCompany.Text,
 				Picture = pbPicture.Image,
 				listGroup = GetCheckBoxGroup(),
 			};
@@ -38,6 +42,10 @@ namespace AddressBook {
 			if (listPerson.Count() > 0) {
 				btUpdate.Enabled = true;
 				btDelete.Enabled = true;
+			}
+			if (cbCompany.Items.Contains(cbCompany.Text)) {
+			} else {
+				cbCompany.Items.Add(cbCompany.Text);
 			}
 		}
 
@@ -59,7 +67,7 @@ namespace AddressBook {
 			listPerson[dgvPersons.CurrentRow.Index].Name = tbName.Text;
 			listPerson[dgvPersons.CurrentRow.Index].MailAddress = tbMailAddress.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Address = tbAddress.Text;
-			listPerson[dgvPersons.CurrentRow.Index].Company = tbCompany.Text;
+			listPerson[dgvPersons.CurrentRow.Index].Company = cbCompany.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Picture = pbPicture.Image;
 			dgvPersons.Refresh();
 		}
@@ -116,7 +124,7 @@ namespace AddressBook {
 			tbName.Text = listPerson[index].Name;
 			tbMailAddress.Text = listPerson[index].MailAddress;
 			tbAddress.Text = listPerson[index].Address;
-			tbCompany.Text = listPerson[index].Company;
+			cbCompany.Text = listPerson[index].Company;
 			pbPicture.Image = listPerson[index].Picture;
 
 			groupCheckBoxAllClear();
