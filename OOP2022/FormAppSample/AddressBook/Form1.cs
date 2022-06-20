@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,8 +45,11 @@ namespace AddressBook {
 				btUpdate.Enabled = true;
 				btDelete.Enabled = true;
 			}
-			if (cbCompany.Items.Contains(cbCompany.Text)) {
-			} else {
+			setCbCompany(cbCompany.Text);
+		}
+
+		private void setCbCompany(string company) {
+			if (!cbCompany.Items.Contains(company)) {
 				cbCompany.Items.Add(cbCompany.Text);
 			}
 		}
@@ -84,7 +89,7 @@ namespace AddressBook {
 			listPerson.RemoveAt(index);*/
 			listPerson.RemoveAt(dgvPersons.CurrentRow.Index);
 			dgvPersons.Rows[dgvPersons.RowCount - 1].Selected = true;
-			
+
 		}
 
 		//チェックボックスにセットされている値をリストとして取り出す
@@ -120,7 +125,7 @@ namespace AddressBook {
 			if (dgvPersons.CurrentRow == null) return;
 
 			int index = dgvPersons.CurrentRow.Index;
-			
+
 			tbName.Text = listPerson[index].Name;
 			tbMailAddress.Text = listPerson[index].MailAddress;
 			tbAddress.Text = listPerson[index].Address;
@@ -148,12 +153,43 @@ namespace AddressBook {
 		}
 
 		private void groupCheckBoxAllClear() {
-		cbFamily.Checked = cbFriend.Checked = cbWork.Checked = cbOther.Checked = false;
+			cbFamily.Checked = cbFriend.Checked = cbWork.Checked = cbOther.Checked = false;
 		}
 
 		private void Form1_Load(object sender, EventArgs e) {
 			btUpdate.Enabled = false;
 			btDelete.Enabled = false;
+		}
+
+		private void btSave_Click(object sender, EventArgs e) {
+			if (sfdSaveDialog.ShowDialog() == DialogResult.OK) {
+				try {
+					var bf = new BinaryFormatter();
+					using (FileStream fs = File.Open(sfdSaveDialog.FileName, FileMode.Create)) {
+						bf.Serialize(fs, listPerson);
+					}
+				} catch (Exception ex) {
+					MessageBox.Show(ex.Message);
+				}
+			}
+		}
+
+		private void btOpen_Click(object sender, EventArgs e) {
+			if (ofdFileOpenDialog.ShowDialog() == DialogResult.OK) {
+				try {
+					var bf = new BinaryFormatter();
+					using (FileStream fs = File.Open(ofdFileOpenDialog.FileName, FileMode.Open)) {
+						listPerson = (BindingList<Person>)bf.Deserialize(fs);
+						dgvPersons.DataSource = null;
+						dgvPersons.DataSource = listPerson;
+					}
+				} catch (Exception ex) {
+					MessageBox.Show(ex.Message);
+				}
+				foreach(var item in listPerson.Select(p => p.Company)) {
+					setCbCompany(item); //存在する会社を登録
+				}
+			}
 		}
 	}
 }
