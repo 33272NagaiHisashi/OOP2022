@@ -35,6 +35,8 @@ namespace AddressBook {
 				MailAddress = tbMailAddress.Text,
 				Address = tbAddress.Text,
 				Company = cbCompany.Text,
+				Registration = dtpRegistration.Value,
+				KindNumber = GetRadioButtonType(),
 				Picture = pbPicture.Image,
 				listGroup = GetCheckBoxGroup(),
 			};
@@ -60,18 +62,18 @@ namespace AddressBook {
 			listPerson[dgvPersons.CurrentRow.Index].Address = tbAddress.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Company = cbCompany.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Picture = pbPicture.Image;
-			dgvPersons.
-			Refresh();
+			listPerson[dgvPersons.CurrentRow.Index].Registration = dtpRegistration.Value;
+			listPerson[dgvPersons.CurrentRow.Index].TelNumber = tbTelNumber.Text;
+
+			dgvPersons.Refresh();
 		}
 
 		private void btDelete_Click(object sender, EventArgs e) {
-			if (dgvPersons.CurrentRow == null) return;
-
 			EnableCheck();
 
-			listPerson.RemoveAt(dgvPersons.CurrentRow.Index);
-			dgvPersons.Rows[dgvPersons.RowCount - 1].Selected = true;
-
+			if (dgvPersons.CurrentRow == null) return;
+			int index = dgvPersons.CurrentRow.Index;
+			listPerson.RemoveAt(index);
 		}
 
 		private void EnableCheck() {
@@ -82,19 +84,30 @@ namespace AddressBook {
 		//チェックボックスにセットされている値をリストとして取り出す
 		private List<Person.GroupType> GetCheckBoxGroup() {
 			var listGroup = new List<Person.GroupType>();
-			if (cbFamily.Checked == true) {
+			if (cbFamily.Checked) {
 				listGroup.Add(Person.GroupType.家族);
 			}
-			if (cbFriend.Checked == true) {
+			if (cbFriend.Checked) {
 				listGroup.Add(Person.GroupType.友人);
 			}
-			if (cbWork.Checked == true) {
+			if (cbWork.Checked) {
 				listGroup.Add(Person.GroupType.仕事);
 			}
-			if (cbOther.Checked == true) {
+			if (cbOther.Checked) {
 				listGroup.Add(Person.GroupType.その他);
 			}
 			return listGroup;
+		}
+
+		private List<Person.KindNumberType> GetRadioButtonType() {
+			var listType = new List<Person.KindNumberType>();
+			if (rbHome.Checked) {
+				listType.Add(Person.KindNumberType.自宅);
+			}
+			if (rbMobile.Checked) {
+				listType.Add(Person.KindNumberType.携帯);
+			}
+			return listType;
 		}
 
 		private void btPictureClear_Click(object sender, EventArgs e) {
@@ -111,6 +124,8 @@ namespace AddressBook {
 			tbAddress.Text = listPerson[index].Address;
 			cbCompany.Text = listPerson[index].Company;
 			pbPicture.Image = listPerson[index].Picture;
+			dtpRegistration.Value = listPerson[index].Registration;
+			tbTelNumber.Text = listPerson[index].TelNumber;
 
 			groupCheckBoxAllClear();
 
@@ -127,6 +142,16 @@ namespace AddressBook {
 						break;
 					case Person.GroupType.その他:
 						cbOther.Checked = true;
+						break;
+				}
+			}
+			foreach(var type in listPerson[index].KindNumber) {
+				switch (type) {
+					case Person.KindNumberType.自宅:
+						rbHome.Checked = true;
+						break;
+					case Person.KindNumberType.携帯:
+						rbMobile.Checked = true;
 						break;
 				}
 			}

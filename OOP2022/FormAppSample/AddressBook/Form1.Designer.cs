@@ -49,6 +49,13 @@ namespace AddressBook {
 			this.btSave = new System.Windows.Forms.Button();
 			this.btOpen = new System.Windows.Forms.Button();
 			this.sfdSaveDialog = new System.Windows.Forms.SaveFileDialog();
+			this.label6 = new System.Windows.Forms.Label();
+			this.dtpRegistration = new System.Windows.Forms.DateTimePicker();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.rbHome = new System.Windows.Forms.RadioButton();
+			this.rbMobile = new System.Windows.Forms.RadioButton();
+			this.tbTelNumber = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPersons)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
 			this.SuspendLayout();
@@ -108,13 +115,13 @@ namespace AddressBook {
 			this.dgvPersons.AllowUserToAddRows = false;
 			this.dgvPersons.AllowUserToDeleteRows = false;
 			this.dgvPersons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvPersons.Location = new System.Drawing.Point(94, 325);
+			this.dgvPersons.Location = new System.Drawing.Point(94, 394);
 			this.dgvPersons.MultiSelect = false;
 			this.dgvPersons.Name = "dgvPersons";
 			this.dgvPersons.RowHeadersVisible = false;
 			this.dgvPersons.RowTemplate.Height = 21;
 			this.dgvPersons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvPersons.Size = new System.Drawing.Size(675, 150);
+			this.dgvPersons.Size = new System.Drawing.Size(710, 150);
 			this.dgvPersons.TabIndex = 1;
 			this.dgvPersons.Click += new System.EventHandler(this.dgvPersons_Click);
 			// 
@@ -205,18 +212,18 @@ namespace AddressBook {
 			// 
 			// pbPicture
 			// 
-			this.pbPicture.Location = new System.Drawing.Point(628, 25);
+			this.pbPicture.Location = new System.Drawing.Point(655, 25);
 			this.pbPicture.Name = "pbPicture";
-			this.pbPicture.Size = new System.Drawing.Size(141, 168);
+			this.pbPicture.Size = new System.Drawing.Size(149, 168);
 			this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pbPicture.TabIndex = 5;
 			this.pbPicture.TabStop = false;
 			// 
 			// btPictureOpen
 			// 
-			this.btPictureOpen.Location = new System.Drawing.Point(628, 199);
+			this.btPictureOpen.Location = new System.Drawing.Point(655, 199);
 			this.btPictureOpen.Name = "btPictureOpen";
-			this.btPictureOpen.Size = new System.Drawing.Size(68, 23);
+			this.btPictureOpen.Size = new System.Drawing.Size(71, 23);
 			this.btPictureOpen.TabIndex = 6;
 			this.btPictureOpen.Text = "開く...";
 			this.btPictureOpen.UseVisualStyleBackColor = true;
@@ -224,9 +231,9 @@ namespace AddressBook {
 			// 
 			// btPictureClear
 			// 
-			this.btPictureClear.Location = new System.Drawing.Point(702, 199);
+			this.btPictureClear.Location = new System.Drawing.Point(732, 199);
 			this.btPictureClear.Name = "btPictureClear";
-			this.btPictureClear.Size = new System.Drawing.Size(67, 23);
+			this.btPictureClear.Size = new System.Drawing.Size(72, 23);
 			this.btPictureClear.TabIndex = 6;
 			this.btPictureClear.Text = "クリア";
 			this.btPictureClear.UseVisualStyleBackColor = true;
@@ -239,9 +246,9 @@ namespace AddressBook {
 			// btUpdate
 			// 
 			this.btUpdate.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.btUpdate.Location = new System.Drawing.Point(629, 260);
+			this.btUpdate.Location = new System.Drawing.Point(655, 253);
 			this.btUpdate.Name = "btUpdate";
-			this.btUpdate.Size = new System.Drawing.Size(67, 41);
+			this.btUpdate.Size = new System.Drawing.Size(71, 41);
 			this.btUpdate.TabIndex = 4;
 			this.btUpdate.Text = "更新";
 			this.btUpdate.UseVisualStyleBackColor = true;
@@ -250,9 +257,9 @@ namespace AddressBook {
 			// btDelete
 			// 
 			this.btDelete.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.btDelete.Location = new System.Drawing.Point(702, 260);
+			this.btDelete.Location = new System.Drawing.Point(732, 253);
 			this.btDelete.Name = "btDelete";
-			this.btDelete.Size = new System.Drawing.Size(67, 41);
+			this.btDelete.Size = new System.Drawing.Size(72, 41);
 			this.btDelete.TabIndex = 4;
 			this.btDelete.Text = "削除";
 			this.btDelete.UseVisualStyleBackColor = true;
@@ -270,7 +277,7 @@ namespace AddressBook {
 			// btSave
 			// 
 			this.btSave.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.btSave.Location = new System.Drawing.Point(12, 434);
+			this.btSave.Location = new System.Drawing.Point(12, 503);
 			this.btSave.Name = "btSave";
 			this.btSave.Size = new System.Drawing.Size(74, 41);
 			this.btSave.TabIndex = 4;
@@ -281,7 +288,7 @@ namespace AddressBook {
 			// btOpen
 			// 
 			this.btOpen.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.btOpen.Location = new System.Drawing.Point(12, 387);
+			this.btOpen.Location = new System.Drawing.Point(12, 456);
 			this.btOpen.Name = "btOpen";
 			this.btOpen.Size = new System.Drawing.Size(74, 41);
 			this.btOpen.TabIndex = 4;
@@ -289,11 +296,83 @@ namespace AddressBook {
 			this.btOpen.UseVisualStyleBackColor = true;
 			this.btOpen.Click += new System.EventHandler(this.btOpen_Click);
 			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.label6.Location = new System.Drawing.Point(499, 563);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(64, 16);
+			this.label6.TabIndex = 8;
+			this.label6.Text = "登録日：";
+			// 
+			// dtpRegistration
+			// 
+			this.dtpRegistration.Location = new System.Drawing.Point(569, 560);
+			this.dtpRegistration.Name = "dtpRegistration";
+			this.dtpRegistration.Size = new System.Drawing.Size(200, 19);
+			this.dtpRegistration.TabIndex = 9;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.label7.Location = new System.Drawing.Point(66, 314);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(120, 27);
+			this.label7.TabIndex = 0;
+			this.label7.Text = "電話番号";
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.label8.Location = new System.Drawing.Point(221, 360);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(29, 12);
+			this.label8.TabIndex = 8;
+			this.label8.Text = "種別";
+			// 
+			// rbHome
+			// 
+			this.rbHome.AutoSize = true;
+			this.rbHome.Checked = true;
+			this.rbHome.Location = new System.Drawing.Point(262, 358);
+			this.rbHome.Name = "rbHome";
+			this.rbHome.Size = new System.Drawing.Size(47, 16);
+			this.rbHome.TabIndex = 10;
+			this.rbHome.TabStop = true;
+			this.rbHome.Text = "自宅";
+			this.rbHome.UseVisualStyleBackColor = true;
+			// 
+			// rbMobile
+			// 
+			this.rbMobile.AutoSize = true;
+			this.rbMobile.Location = new System.Drawing.Point(324, 358);
+			this.rbMobile.Name = "rbMobile";
+			this.rbMobile.Size = new System.Drawing.Size(47, 16);
+			this.rbMobile.TabIndex = 10;
+			this.rbMobile.Text = "携帯";
+			this.rbMobile.UseVisualStyleBackColor = true;
+			// 
+			// tbTelNumber
+			// 
+			this.tbTelNumber.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.tbTelNumber.Location = new System.Drawing.Point(213, 314);
+			this.tbTelNumber.Name = "tbTelNumber";
+			this.tbTelNumber.Size = new System.Drawing.Size(390, 31);
+			this.tbTelNumber.TabIndex = 2;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(798, 507);
+			this.ClientSize = new System.Drawing.Size(844, 590);
+			this.Controls.Add(this.rbMobile);
+			this.Controls.Add(this.rbHome);
+			this.Controls.Add(this.dtpRegistration);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.label6);
 			this.Controls.Add(this.cbCompany);
 			this.Controls.Add(this.btPictureClear);
 			this.Controls.Add(this.btPictureOpen);
@@ -307,11 +386,13 @@ namespace AddressBook {
 			this.Controls.Add(this.cbWork);
 			this.Controls.Add(this.cbFriend);
 			this.Controls.Add(this.cbFamily);
+			this.Controls.Add(this.tbTelNumber);
 			this.Controls.Add(this.tbMailAddress);
 			this.Controls.Add(this.tbAddress);
 			this.Controls.Add(this.textBox2);
 			this.Controls.Add(this.tbName);
 			this.Controls.Add(this.dgvPersons);
+			this.Controls.Add(this.label7);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
@@ -354,6 +435,13 @@ namespace AddressBook {
 		private System.Windows.Forms.Button btSave;
 		private System.Windows.Forms.Button btOpen;
 		private System.Windows.Forms.SaveFileDialog sfdSaveDialog;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.DateTimePicker dtpRegistration;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.RadioButton rbHome;
+		private System.Windows.Forms.RadioButton rbMobile;
+		private System.Windows.Forms.TextBox tbTelNumber;
 	}
 }
 
