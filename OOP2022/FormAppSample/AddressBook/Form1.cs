@@ -41,55 +41,42 @@ namespace AddressBook {
 			listPerson.Add(newPerson);
 			dgvPersons.Rows[dgvPersons.RowCount - 1].Selected = true;
 
-			if (listPerson.Count() > 0) {
-				btUpdate.Enabled = true;
-				btDelete.Enabled = true;
-			}
+			EnableCheck();
+
 			setCbCompany(cbCompany.Text);
 		}
 
 		private void setCbCompany(string company) {
 			if (!cbCompany.Items.Contains(company)) {
-				cbCompany.Items.Add(cbCompany.Text);
+				cbCompany.Items.Add(company);
 			}
 		}
 
 		private void btUpdate_Click(object sender, EventArgs e) {
 			if (dgvPersons.CurrentRow == null) return;
 
-			/*listPerson.RemoveAt(index);
-
-			Person newPerson = new Person {
-				Name = tbName.Text,
-				MailAddress = tbMailAddress.Text,
-				Address = tbAddress.Text,
-				Company = tbCompany.Text,
-				Picture = pbPicture.Image,
-				listGroup = GetCheckBoxGroup(),
-			};
-			listPerson.Insert(index, newPerson);*/
-
 			listPerson[dgvPersons.CurrentRow.Index].Name = tbName.Text;
 			listPerson[dgvPersons.CurrentRow.Index].MailAddress = tbMailAddress.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Address = tbAddress.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Company = cbCompany.Text;
 			listPerson[dgvPersons.CurrentRow.Index].Picture = pbPicture.Image;
-			dgvPersons.Refresh();
+			dgvPersons.
+			Refresh();
 		}
 
 		private void btDelete_Click(object sender, EventArgs e) {
 			if (dgvPersons.CurrentRow == null) return;
 
-			if (listPerson.Count() == 0) {
-				btDelete.Enabled = false;
-				btUpdate.Enabled = false;
-			}
+			EnableCheck();
 
-			/*int index = dgvPersons.CurrentRow.Index;
-			listPerson.RemoveAt(index);*/
 			listPerson.RemoveAt(dgvPersons.CurrentRow.Index);
 			dgvPersons.Rows[dgvPersons.RowCount - 1].Selected = true;
 
+		}
+
+		private void EnableCheck() {
+			btDelete.Enabled = listPerson.Count() > 0 ? true : false;
+			btUpdate.Enabled = listPerson.Count() > 0 ? true : false;
 		}
 
 		//チェックボックスにセットされている値をリストとして取り出す
@@ -115,13 +102,6 @@ namespace AddressBook {
 		}
 
 		private void dgvPersons_Click(object sender, EventArgs e) {
-			/*foreach (DataGridViewRow dr in dgvPersons.SelectedRows) {
-				tbName.Text = listPerson[dr.Index].Name;
-				tbMailAddress.Text = listPerson[dr.Index].MailAddress;
-				tbAddress.Text = listPerson[dr.Index].Address;
-				tbCompany.Text = listPerson[dr.Index].Company;
-				pbPicture.Image = listPerson[dr.Index].Picture;
-			}*/
 			if (dgvPersons.CurrentRow == null) return;
 
 			int index = dgvPersons.CurrentRow.Index;
@@ -157,8 +137,7 @@ namespace AddressBook {
 		}
 
 		private void Form1_Load(object sender, EventArgs e) {
-			btUpdate.Enabled = false;
-			btDelete.Enabled = false;
+			EnableCheck();
 		}
 
 		private void btSave_Click(object sender, EventArgs e) {
@@ -190,6 +169,7 @@ namespace AddressBook {
 					setCbCompany(item); //存在する会社を登録
 				}
 			}
+			EnableCheck();
 		}
 	}
 }
