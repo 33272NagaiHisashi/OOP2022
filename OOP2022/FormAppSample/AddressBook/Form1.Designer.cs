@@ -202,7 +202,7 @@ namespace AddressBook {
 			// btAddPerson
 			// 
 			this.btAddPerson.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.btAddPerson.Location = new System.Drawing.Point(555, 260);
+			this.btAddPerson.Location = new System.Drawing.Point(581, 253);
 			this.btAddPerson.Name = "btAddPerson";
 			this.btAddPerson.Size = new System.Drawing.Size(68, 41);
 			this.btAddPerson.TabIndex = 4;
@@ -212,6 +212,7 @@ namespace AddressBook {
 			// 
 			// pbPicture
 			// 
+			this.pbPicture.BackColor = System.Drawing.Color.Gray;
 			this.pbPicture.Location = new System.Drawing.Point(655, 25);
 			this.pbPicture.Name = "pbPicture";
 			this.pbPicture.Size = new System.Drawing.Size(149, 168);

@@ -37,6 +37,7 @@ namespace AddressBook {
 				Company = cbCompany.Text,
 				Registration = dtpRegistration.Value,
 				KindNumber = GetRadioButtonType(),
+				TelNumber = tbTelNumber.Text,
 				Picture = pbPicture.Image,
 				listGroup = GetCheckBoxGroup(),
 			};
@@ -77,8 +78,8 @@ namespace AddressBook {
 		}
 
 		private void EnableCheck() {
-			btDelete.Enabled = listPerson.Count() > 0 ? true : false;
-			btUpdate.Enabled = listPerson.Count() > 0 ? true : false;
+			btDelete.Enabled = listPerson.Count() == 0 ? false : true;
+			btUpdate.Enabled = listPerson.Count() == 0 ? false : true;
 		}
 
 		//チェックボックスにセットされている値をリストとして取り出す
