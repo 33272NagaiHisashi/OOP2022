@@ -9,15 +9,16 @@ using System.Net;
 namespace XmlSample {
 	class Program {
 		static void Main(string[] args) {
+			using (var wc = new WebClient()) {
 
-			var wc = new WebClient();
-			var stream = new WebClient().OpenRead("https://news.yahoo.co.jp/rss/media/exp/all.xml");
+				var stream = wc.OpenRead("https://news.yahoo.co.jp/rss/media/exp/all.xml");
 
-			var xdoc = XDocument.Load(stream);
-			var xNews = xdoc.Root.Descendants("title");
+				var xdoc = XDocument.Load(stream);
+				var xNews = xdoc.Root.Descendants("item").Select(x => x.Element("title"));
 
-			foreach(var data in xNews) {
-				Console.WriteLine(data);
+				foreach (var data in xNews) {
+					Console.WriteLine(data);
+				}
 			}
 		}
 	}
