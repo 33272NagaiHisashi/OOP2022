@@ -8,3 +8,7 @@ C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\obj\Debug\RssReader.csproj.CoreCompileInputs.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\obj\Debug\RssReader.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\obj\Debug\RssReader.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\bin\Debug\Microsoft.Toolkit.Forms.UI.Controls.WebView.dll
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\bin\Debug\Microsoft.Toolkit.Forms.UI.Controls.WebView.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\bin\Debug\Microsoft.Toolkit.Forms.UI.Controls.WebView.xml
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\RssReader\obj\Debug\RssReader.csproj.CopyComplete
