@@ -50,7 +50,20 @@ namespace Exercise1 {
 		}
 
 		private static void Exercise1_4(string file, string newfile) {
-
+			var element = new XElement("ballsport",
+							new XElement("name", "サッカー", new XAttribute("kanji", "蹴球")),
+							new XElement("teammembers", "11"),
+							new XElement("firstplayed", "1863")
+							);
+			var xdoc = XDocument.Load(file);
+			xdoc.Root.Add(element);
+			foreach(var sport in xdoc.Root.Elements()) {
+				var xname = sport.Element("name");
+				var xkanji = xname.Attribute("kanji");
+				var xteammembers = sport.Element("teammembers");
+				var xfirstplayed = sport.Element("firstplayed");
+				Console.WriteLine("{0} {1} {2} {3}", xname.Value,xkanji.Value, xteammembers.Value, xfirstplayed.Value);
+			}
 		}
 	}
 }
