@@ -34,19 +34,22 @@ namespace Exercise1 {
 
 		private static void Exercise1_2(string file) {
 			var xdoc = XDocument.Load(file);
-			var sports = xdoc.Root.Elements().OrderBy(x => (int)(x.Element("firstplayed")));
-			foreach (var sport in sports) {
-				var name = sport.Element("name").Attribute("kanji");
-				var firstplayed = (int)sport.Element("firstplayed");
-				Console.WriteLine("{0}({1})",name.Value,firstplayed);
-			}
+			var sports = xdoc.Root.Elements().Select(x => new {
+				name = (string)x.Element("name").Attribute("kanji"),
+				firstplayed = (int)x.Element("firstplayed")
+			}).OrderBy(x => x.firstplayed);
+			Console.WriteLine("{0}({1})")
 		}
 
 		private static void Exercise1_3(string file) {
 			var xdoc = XDocument.Load(file);
-			var sports = xdoc.Root.Elements().OrderByDescending(x => (int)(x.Element("teammembers"))).FirstOrDefault();
-			var name = sports.Element("name");
-			Console.WriteLine(name.Value);
+			var sports = xdoc.Root.Elements().Select(x => new { 
+													name = (string)x.Element("name"),
+													teammembers = (int)x.Element("teammembers")})
+											 .OrderByDescending(x => x.teammembers)
+											 .FirstOrDefault();
+			Console.WriteLine("{0} {1}人", sports.name,sports.teammembers);
+			
 		}
 
 		private static void Exercise1_4(string file, string newfile) {
@@ -57,12 +60,15 @@ namespace Exercise1 {
 							);
 			var xdoc = XDocument.Load(file);
 			xdoc.Root.Add(element);
-			foreach(var sport in xdoc.Root.Elements()) {
-				var xname = sport.Element("name");
-				var xkanji = xname.Attribute("kanji");
-				var xteammembers = sport.Element("teammembers");
-				var xfirstplayed = sport.Element("firstplayed");
-				Console.WriteLine("{0} {1} {2} {3}", xname.Value,xkanji.Value, xteammembers.Value, xfirstplayed.Value);
+			xdoc.Save(newfile);
+			var sports = xdoc.Root.Elements().Select(x => new {
+				name = (string)x.Element("name"),
+				kanji = (string)x.Element("name").Attribute("kanji"),
+				teammembers = (int)x.Element("teammembers"),
+				firstplayed = (int)x.Element("firstplayed"),
+			});
+			foreach (var sport in sports) {
+				Console.WriteLine("{0} {1} {2} {3}", sport.name,sport.kanji,sport.teammembers,sport.firstplayed);
 			}
 		}
 	}
