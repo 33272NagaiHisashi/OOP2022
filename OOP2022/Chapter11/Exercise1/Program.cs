@@ -35,10 +35,12 @@ namespace Exercise1 {
 		private static void Exercise1_2(string file) {
 			var xdoc = XDocument.Load(file);
 			var sports = xdoc.Root.Elements().Select(x => new {
-				name = (string)x.Element("name").Attribute("kanji"),
-				firstplayed = (int)x.Element("firstplayed")
-			}).OrderBy(x => x.firstplayed);
-			Console.WriteLine("{0}({1})")
+													name = (string)x.Element("name").Attribute("kanji"),
+													firstplayed = (int)x.Element("firstplayed")})
+											 .OrderBy(x => x.firstplayed);
+			foreach (var sport in sports) {
+				Console.WriteLine("{0}({1})", sport.name,sport.firstplayed);
+			}
 		}
 
 		private static void Exercise1_3(string file) {
