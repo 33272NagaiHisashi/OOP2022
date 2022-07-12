@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -26,23 +28,23 @@ namespace Exercise02 {
 			Console.WriteLine();
 		}
 
-		private static Novelist Exercise2_1(string v) {
-			var novelist = new Novelist {
-				Name = "アーサー・C・クラーク",
-				Birth = new DateTime(1917 - 12 - 16),
-				Masterpieces = new string[] {
-					"2001年宇宙の旅",
-					"幼年期の終り",
-				}
-			};
-			using (var reader = XmlReader.Create(v)) {
+		private static Novelist Exercise2_1(string file) {
+			using (var reader = XmlReader.Create(file)) {
 				var serializer = new XmlSerializer(typeof(Novelist));
-				var novel = serializer.Deserialize(reader) as Novelist;
+				var novelist = serializer.Deserialize(reader) as Novelist;
+				return novelist;
 			}
-			return novelist;
 		}
 
-		private static void Exercise2_2(object novelist, string v) {
+		private static void Exercise2_2(Novelist novelist, string file) {
+			var settings = new DataContractJsonSerializerSettings {
+				DateTimeFormat = new DateTimeFormat("yyyy-MM-dd'T'HH:mm:ssZ"),
+				UseSimpleDictionaryFormat = true,
+			};
+			using(var stream = new FileStream(file, FileMode.Create, FileAccess.Write)) {
+				var serializer = new DataContractJsonSerializer(novelist.GetType(), settings);
+				serializer.WriteObject(stream, novelist);
+			}
 		}
 	}
 }
