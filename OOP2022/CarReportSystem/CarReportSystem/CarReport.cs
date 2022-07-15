@@ -13,6 +13,15 @@ namespace CarReportSystem {
 		[System.ComponentModel.DisplayName("記録者")]
         public string Auther { get; set; }  //記録者
         [System.ComponentModel.DisplayName("メーカー")]
+        public string Type {
+            get {
+                string types = "";
+                foreach (MakerGroup type in Maker) {
+                    types += "[" + type + "]";
+                }
+                return types;
+            }
+        }
         public List<MakerGroup> Maker { get; set; }   //メーカー
         [System.ComponentModel.DisplayName("車名")]
         public string CarName { get; set; } //車名
