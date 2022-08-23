@@ -9,11 +9,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CarReportSystem {
 	public partial class Form1 : Form {
+		Settings settings = new Settings();
 		BindingList<CarReport> listCarReport = new BindingList<CarReport>();
-		int mode;
 		public Form1() {
 			InitializeComponent();
 			dgvCarReport.DataSource = listCarReport;
@@ -72,6 +74,7 @@ namespace CarReportSystem {
 			listCarReport[dgvCarReport.CurrentRow.Index].CarName = cbCarName.Text;
 			listCarReport[dgvCarReport.CurrentRow.Index].Report = tbReport.Text;
 			listCarReport[dgvCarReport.CurrentRow.Index].Picture = pbPicture.Image;
+			listCarReport[dgvCarReport.CurrentRow.Index].Maker = GetMakerGroups();
 
 			dgvCarReport.Refresh();
 		}
@@ -112,10 +115,10 @@ namespace CarReportSystem {
 					MessageBox.Show(ex.Message);
 				}
 				foreach (var item in listCarReport.Select(p => p.Auther)) {
-					setAuther(item); //存在する会社を登録
+					setAuther(item); 
 				}
 				foreach (var item in listCarReport.Select(p => p.CarName)) {
-					setCarName(item); //存在する会社を登録
+					setCarName(item);
 				}
 			}
 		}
@@ -146,12 +149,25 @@ namespace CarReportSystem {
 		}
 
 		private void ColorSetting_Click(object sender, EventArgs e) {
-			if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+			if (colorDialog.ShowDialog() == DialogResult.OK) {
+				BackColor = colorDialog.Color;
+				settings.MainFormColor = colorDialog.Color.ToArgb();
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e) {
-			pbPicture.SizeMode = (PictureBoxSizeMode)mode;
+		private void Form1_FormClosed(object sender, FormClosedEventArgs e) {
+			using (var color = XmlWriter.Create("settings.xml")) {
+				var serializer = new XmlSerializer(settings.GetType());
+				serializer.Serialize(color, settings);
+			}
+		}
+
+		private void Form1_Load(object sender, EventArgs e) {
+			using (var reader = XmlReader.Create("settings.xml")) {
+				var serializer = new XmlSerializer(typeof(Settings));
+				var setting = serializer.Deserialize(reader) as Settings;
+				BackColor = Color.FromArgb(settings.MainFormColor);
+			}
 		}
 	}
 }
