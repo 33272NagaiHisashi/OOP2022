@@ -53,7 +53,9 @@ namespace CarReportSystem {
 			this.pbPicture = new System.Windows.Forms.PictureBox();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-			this.menuStrip = new System.Windows.Forms.MenuStrip();
+			this.button1 = new System.Windows.Forms.Button();
+			this.colorDialog = new System.Windows.Forms.ColorDialog();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,11 +63,9 @@ namespace CarReportSystem {
 			this.色設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.button1 = new System.Windows.Forms.Button();
-			this.colorDialog = new System.Windows.Forms.ColorDialog();
 			((System.ComponentModel.ISupportInitialize)(this.dgvCarReport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
-			this.menuStrip.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -327,7 +327,7 @@ namespace CarReportSystem {
 			// 
 			// pbPicture
 			// 
-			this.pbPicture.BackColor = System.Drawing.Color.White;
+			this.pbPicture.BackColor = System.Drawing.Color.LightGray;
 			this.pbPicture.Location = new System.Drawing.Point(472, 74);
 			this.pbPicture.Name = "pbPicture";
 			this.pbPicture.Size = new System.Drawing.Size(225, 267);
@@ -338,15 +338,28 @@ namespace CarReportSystem {
 			// 
 			this.openFileDialog.FileName = "openFileDialog1";
 			// 
-			// menuStrip
+			// button1
 			// 
-			this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.button1.Location = new System.Drawing.Point(637, 38);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(60, 23);
+			this.button1.TabIndex = 28;
+			this.button1.Text = "★";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.ColorSetting_Click);
+			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+			this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイルToolStripMenuItem});
-			this.menuStrip.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip.Name = "menuStrip";
-			this.menuStrip.Size = new System.Drawing.Size(751, 24);
-			this.menuStrip.TabIndex = 27;
-			this.menuStrip.Text = "menuStrip1";
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(79, 24);
+			this.menuStrip1.TabIndex = 29;
+			this.menuStrip1.Text = "menuStrip1";
+			this.menuStrip1.UseWaitCursor = true;
 			// 
 			// ファイルToolStripMenuItem
 			// 
@@ -400,21 +413,11 @@ namespace CarReportSystem {
 			this.終了ToolStripMenuItem.Text = "終了";
 			this.終了ToolStripMenuItem.Click += new System.EventHandler(this.btExit_Click);
 			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(637, 38);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(60, 23);
-			this.button1.TabIndex = 28;
-			this.button1.Text = "★";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.ColorSetting_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.ClientSize = new System.Drawing.Size(751, 647);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.pbPicture);
@@ -444,8 +447,7 @@ namespace CarReportSystem {
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.menuStrip);
-			this.MainMenuStrip = this.menuStrip;
+			this.Controls.Add(this.menuStrip1);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.TransparencyKey = System.Drawing.SystemColors.Control;
@@ -453,8 +455,8 @@ namespace CarReportSystem {
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvCarReport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
-			this.menuStrip.ResumeLayout(false);
-			this.menuStrip.PerformLayout();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -490,17 +492,17 @@ namespace CarReportSystem {
 		private System.Windows.Forms.PictureBox pbPicture;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog;
-		private System.Windows.Forms.MenuStrip menuStrip;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ColorDialog colorDialog;
+		private System.Windows.Forms.DataGridView dgvCarReport;
+		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem ファイルToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 開くToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 色設定ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.ColorDialog colorDialog;
-		private System.Windows.Forms.DataGridView dgvCarReport;
+		private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
 	}
 }
 

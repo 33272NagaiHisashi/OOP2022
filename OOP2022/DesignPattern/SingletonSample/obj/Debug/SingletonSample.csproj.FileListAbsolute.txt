@@ -1,0 +1,7 @@
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\bin\Debug\SingletonSample.exe.config
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\bin\Debug\SingletonSample.exe
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\bin\Debug\SingletonSample.pdb
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\obj\Debug\SingletonSample.csproj.AssemblyReference.cache
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\obj\Debug\SingletonSample.csproj.CoreCompileInputs.cache
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\obj\Debug\SingletonSample.exe
+C:\Users\n_uchiyama\source\repos\33000UchiyamaNaoto\OOP2022\DesignPattern\SingletonSample\obj\Debug\SingletonSample.pdb
