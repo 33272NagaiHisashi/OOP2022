@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextFileProcessor {
+namespace Exercise01 {
 	class Program {
-		static void Main(string[] args) {
-		}
+		string s;
 	}
 }
