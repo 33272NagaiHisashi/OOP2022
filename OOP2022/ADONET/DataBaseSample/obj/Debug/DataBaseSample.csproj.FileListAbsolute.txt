@@ -1,0 +1,10 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\bin\Debug\DataBaseSample.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\bin\Debug\DataBaseSample.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\bin\Debug\DataBaseSample.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\ADONET\DataBaseSample\obj\Debug\DataBaseSample.btConnect.resources
