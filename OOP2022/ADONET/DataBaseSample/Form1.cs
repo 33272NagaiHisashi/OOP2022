@@ -39,10 +39,7 @@ namespace DataBaseSample {
 		}
 
 		private void btExecute_Click(object sender, EventArgs e) {
-		}
-
-		/*private void btExecute_Click(object sender, EventArgs e) {
 			this.社員TableAdapter.FillBySalary(this.infosys202232DataSet.社員, int.Parse(tbValue.Text));
-		}*/
+		}
 	}
 }

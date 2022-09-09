@@ -47,14 +47,16 @@ namespace AddressBook {
 			this.tbMemo = new System.Windows.Forms.TextBox();
 			this.btUpdate = new System.Windows.Forms.Button();
 			this.btConnect = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.addressTableTableAdapter = new AddressBook.infosys202232DataSetTableAdapters.AddressTableTableAdapter();
-			this.tableAdapterManager = new AddressBook.infosys202232DataSetTableAdapters.TableAdapterManager();
+			this.btAdd = new System.Windows.Forms.Button();
 			this.btOpenImage = new System.Windows.Forms.Button();
 			this.btDeleteImage = new System.Windows.Forms.Button();
 			this.ofdImage = new System.Windows.Forms.OpenFileDialog();
 			this.sfdImage = new System.Windows.Forms.SaveFileDialog();
 			this.pbImage = new System.Windows.Forms.PictureBox();
+			this.btSearch = new System.Windows.Forms.Button();
+			this.tbSearch = new System.Windows.Forms.TextBox();
+			this.addressTableTableAdapter = new AddressBook.infosys202232DataSetTableAdapters.AddressTableTableAdapter();
+			this.tableAdapterManager = new AddressBook.infosys202232DataSetTableAdapters.TableAdapterManager();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAddressTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.addressTableBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.infosys202232DataSet)).BeginInit();
@@ -78,7 +80,7 @@ namespace AddressBook {
             this.dataGridViewTextBoxColumn6,
             this.Image});
 			this.dgvAddressTable.DataSource = this.addressTableBindingSource;
-			this.dgvAddressTable.Location = new System.Drawing.Point(12, 352);
+			this.dgvAddressTable.Location = new System.Drawing.Point(12, 390);
 			this.dgvAddressTable.MultiSelect = false;
 			this.dgvAddressTable.Name = "dgvAddressTable";
 			this.dgvAddressTable.ReadOnly = true;
@@ -86,6 +88,7 @@ namespace AddressBook {
 			this.dgvAddressTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvAddressTable.Size = new System.Drawing.Size(743, 218);
 			this.dgvAddressTable.TabIndex = 1;
+			this.dgvAddressTable.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvAddressTable_DataError);
 			this.dgvAddressTable.Click += new System.EventHandler(this.dgvAddressTable_Click);
 			// 
 			// dataGridViewTextBoxColumn1
@@ -257,24 +260,15 @@ namespace AddressBook {
 			this.btConnect.UseVisualStyleBackColor = true;
 			this.btConnect.Click += new System.EventHandler(this.btConnect_Click);
 			// 
-			// button1
+			// btAdd
 			// 
-			this.button1.Location = new System.Drawing.Point(604, 169);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(131, 43);
-			this.button1.TabIndex = 16;
-			this.button1.Text = "追加";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// addressTableTableAdapter
-			// 
-			this.addressTableTableAdapter.ClearBeforeFill = true;
-			// 
-			// tableAdapterManager
-			// 
-			this.tableAdapterManager.AddressTableTableAdapter = this.addressTableTableAdapter;
-			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-			this.tableAdapterManager.UpdateOrder = AddressBook.infosys202232DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			this.btAdd.Location = new System.Drawing.Point(604, 169);
+			this.btAdd.Name = "btAdd";
+			this.btAdd.Size = new System.Drawing.Size(131, 43);
+			this.btAdd.TabIndex = 16;
+			this.btAdd.Text = "追加";
+			this.btAdd.UseVisualStyleBackColor = true;
+			this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
 			// 
 			// btOpenImage
 			// 
@@ -310,15 +304,45 @@ namespace AddressBook {
 			this.pbImage.TabIndex = 20;
 			this.pbImage.TabStop = false;
 			// 
+			// btSearch
+			// 
+			this.btSearch.Location = new System.Drawing.Point(12, 339);
+			this.btSearch.Name = "btSearch";
+			this.btSearch.Size = new System.Drawing.Size(87, 31);
+			this.btSearch.TabIndex = 21;
+			this.btSearch.Text = "名前検索";
+			this.btSearch.UseVisualStyleBackColor = true;
+			this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+			// 
+			// tbSearch
+			// 
+			this.tbSearch.Location = new System.Drawing.Point(105, 339);
+			this.tbSearch.Multiline = true;
+			this.tbSearch.Name = "tbSearch";
+			this.tbSearch.Size = new System.Drawing.Size(187, 31);
+			this.tbSearch.TabIndex = 22;
+			// 
+			// addressTableTableAdapter
+			// 
+			this.addressTableTableAdapter.ClearBeforeFill = true;
+			// 
+			// tableAdapterManager
+			// 
+			this.tableAdapterManager.AddressTableTableAdapter = this.addressTableTableAdapter;
+			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+			this.tableAdapterManager.UpdateOrder = AddressBook.infosys202232DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(777, 590);
+			this.ClientSize = new System.Drawing.Size(777, 621);
+			this.Controls.Add(this.tbSearch);
+			this.Controls.Add(this.btSearch);
 			this.Controls.Add(this.pbImage);
 			this.Controls.Add(this.btDeleteImage);
 			this.Controls.Add(this.btOpenImage);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btAdd);
 			this.Controls.Add(this.btConnect);
 			this.Controls.Add(this.btUpdate);
 			this.Controls.Add(this.label6);
@@ -363,7 +387,7 @@ namespace AddressBook {
 		private System.Windows.Forms.TextBox tbMemo;
 		private System.Windows.Forms.Button btUpdate;
 		private System.Windows.Forms.Button btConnect;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btAdd;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -376,6 +400,8 @@ namespace AddressBook {
 		private System.Windows.Forms.OpenFileDialog ofdImage;
 		private System.Windows.Forms.SaveFileDialog sfdImage;
 		private System.Windows.Forms.PictureBox pbImage;
+		private System.Windows.Forms.Button btSearch;
+		private System.Windows.Forms.TextBox tbSearch;
 	}
 }
 

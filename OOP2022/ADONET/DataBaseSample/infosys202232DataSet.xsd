@@ -47,7 +47,7 @@ WHERE                       (給与 &gt;= @value)</CommandText>
   <xs:element name="infosys202232DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="infosys202232DataSet" msprop:Generator_UserDSName="infosys202232DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="社員" msprop:Generator_TableClassName="社員DataTable" msprop:Generator_TableVarName="table社員" msprop:Generator_RowChangedName="社員RowChanged" msprop:Generator_TablePropName="社員" msprop:Generator_RowDeletingName="社員RowDeleting" msprop:Generator_RowChangingName="社員RowChanging" msprop:Generator_RowEvHandlerName="社員RowChangeEventHandler" msprop:Generator_RowDeletedName="社員RowDeleted" msprop:Generator_RowClassName="社員Row" msprop:Generator_UserTableName="社員" msprop:Generator_RowEvArgName="社員RowChangeEvent">
+        <xs:element name="社員" msprop:Generator_TableClassName="社員DataTable" msprop:Generator_TableVarName="table社員" msprop:Generator_TablePropName="社員" msprop:Generator_RowDeletingName="社員RowDeleting" msprop:Generator_RowChangingName="社員RowChanging" msprop:Generator_RowEvHandlerName="社員RowChangeEventHandler" msprop:Generator_RowDeletedName="社員RowDeleted" msprop:Generator_UserTableName="社員" msprop:Generator_RowChangedName="社員RowChanged" msprop:Generator_RowEvArgName="社員RowChangeEvent" msprop:Generator_RowClassName="社員Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="社員番号" msprop:Generator_ColumnVarNameInTable="column社員番号" msprop:Generator_ColumnPropNameInRow="社員番号" msprop:Generator_ColumnPropNameInTable="社員番号Column" msprop:Generator_UserColumnName="社員番号" type="xs:int" minOccurs="0" />

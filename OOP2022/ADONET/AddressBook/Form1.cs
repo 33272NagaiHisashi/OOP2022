@@ -24,7 +24,6 @@ namespace AddressBook {
 		private void Form1_Load(object sender, EventArgs e) {
 			// TODO: このコード行はデータを 'infosys202232DataSet.AddressTable' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
 
-
 		}
 
 		private void btConnect_Click(object sender, EventArgs e) {
@@ -45,14 +44,28 @@ namespace AddressBook {
 		}
 
 		private void dgvAddressTable_Click(object sender, EventArgs e) {
+			if (dgvAddressTable.CurrentRow == null) {
+				return;
+			}
+			
 			tbName.Text = dgvAddressTable.CurrentRow.Cells[1].Value.ToString();
 			tbTel.Text = dgvAddressTable.CurrentRow.Cells[2].Value.ToString();
 			tbMail.Text = dgvAddressTable.CurrentRow.Cells[3].Value.ToString();
 			tbAddress.Text = dgvAddressTable.CurrentRow.Cells[4].Value.ToString();
 			tbMemo.Text = dgvAddressTable.CurrentRow.Cells[5].Value.ToString();
+			if (!(dgvAddressTable.CurrentRow.Cells[6].Value is DBNull)) {
+				pbImage.Image = ByteArrayToImage((byte[])dgvAddressTable.CurrentRow.Cells[6].Value);
+			} else {
+				pbImage.Image = null;
+			}
+			//pbImage.Image = (Image)dgvAddressTable.CurrentRow.Cells[6].Value;
+			/*if (!DBNull.Value.Equals(dgvAddressTable.CurrentRow.Cells[6].Value)){
+				pbImage.Image = ByteArrayToImage((byte[])dgvAddressTable.CurrentRow.Cells[6].Value);
+			}*/
 		}
 
 		private void btOpenImage_Click(object sender, EventArgs e) {
+			//ofdImage.Filter = "画像ファイル(*.jpg,*.png,*.bmp) | *.jpg,*.bmp";
 			if (ofdImage.ShowDialog() == DialogResult.OK) {
 				pbImage.Image = System.Drawing.Image.FromFile(ofdImage.FileName);
 			}
@@ -74,6 +87,24 @@ namespace AddressBook {
 			ImageConverter imgconv = new ImageConverter();
 			byte[] b = (byte[])imgconv.ConvertTo(img, typeof(byte[]));
 			return b;
+		}
+
+		private void dgvAddressTable_DataError(object sender, DataGridViewDataErrorEventArgs e) {
+
+		}
+
+		private void btSearch_Click(object sender, EventArgs e) {
+			addressTableTableAdapter.FillByName(infosys202232DataSet.AddressTable, tbSearch.Text);
+		}
+
+		private void btAdd_Click(object sender, EventArgs e) {
+			DataRow newRow = infosys202232DataSet.AddressTable.NewRow();
+			newRow[1] = tbName.Text;
+			newRow[2] = tbAddress.Text;
+			//データセットへ新しいレコードを追加
+			infosys202232DataSet.AddressTable.Rows.Add(newRow);
+			//データベース更新
+			this.addressTableTableAdapter.Update(this.infosys202232DataSet.AddressTable);
 		}
 	}
 }
