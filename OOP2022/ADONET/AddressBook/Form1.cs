@@ -100,11 +100,37 @@ namespace AddressBook {
 		private void btAdd_Click(object sender, EventArgs e) {
 			DataRow newRow = infosys202232DataSet.AddressTable.NewRow();
 			newRow[1] = tbName.Text;
-			newRow[2] = tbAddress.Text;
+			newRow[2] = tbTel.Text;
+			newRow[3] = tbMail.Text;
+			newRow[4] = tbAddress.Text;
+			newRow[5] = tbMemo.Text;
+			newRow[6] = pbImage.Image;
 			//データセットへ新しいレコードを追加
 			infosys202232DataSet.AddressTable.Rows.Add(newRow);
 			//データベース更新
 			this.addressTableTableAdapter.Update(this.infosys202232DataSet.AddressTable);
+		}
+
+		private void btClear_Click(object sender, EventArgs e) {
+			tbName.Clear();
+			tbAddress.Clear();
+			tbTel.Clear();
+			tbMail.Clear();
+			tbMemo.Clear();
+			pbImage.Image = null;
+		}
+
+		private void 終了ToolStripMenuItem_Click(object sender, EventArgs e) {
+
+		}
+
+		private void btSearchClear_Click(object sender, EventArgs e) {
+			tbSearch.Clear();
+			addressTableTableAdapter.FillByName(infosys202232DataSet.AddressTable,"");
+		}
+
+		private void tsmiVersionInformation_Click(object sender, EventArgs e) {
+			new Version().ShowDialog();
 		}
 	}
 }
