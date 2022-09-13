@@ -18,7 +18,6 @@ namespace AddressBook {
 			this.Validate();
 			this.addressTableBindingSource.EndEdit();
 			this.tableAdapterManager.UpdateAll(this.infosys202232DataSet);
-
 		}
 
 		private void Form1_Load(object sender, EventArgs e) {

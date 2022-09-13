@@ -87,7 +87,7 @@ namespace CarReportSystem {
 		}
 
 		private void dgvCarReport_Click(object sender, EventArgs e) {
-			if (dgvCarReport.CurrentRow == null) return;
+			/*if (dgvCarReport.CurrentRow == null) return;
 
 			int index = dgvCarReport.CurrentRow.Index;
 
@@ -95,7 +95,19 @@ namespace CarReportSystem {
 			cbAuther.Text = listCarReport[index].Auther;
 			cbCarName.Text = listCarReport[index].CarName;
 			tbReport.Text = listCarReport[index].Report;
-			pbPicture.Image = listCarReport[index].Picture;
+			pbPicture.Image = listCarReport[index].Picture;*/
+			if (dgvCarReport.CurrentRow == null) {
+				return;
+			}
+			dtpDate.Value = 
+			cbAuther.Text = dgvCarReport.CurrentRow.Cells[2].Value.ToString();
+			cbCarName.Text = dgvCarReport.CurrentRow.Cells[3].Value.ToString();
+			tbReport.Text = dgvCarReport.CurrentRow.Cells[4].Value.ToString();
+			if (!(dgvCarReport.CurrentRow.Cells[5].Value is DBNull)) {
+				pbPicture.Image = ByteArrayToImage((byte[])dgvCarReport.CurrentRow.Cells[6].Value);
+			} else {
+				pbPicture.Image = null;
+			}
 		}
 
 		private void btExit_Click(object sender, EventArgs e) {
@@ -171,6 +183,46 @@ namespace CarReportSystem {
 				}
 			} catch (Exception) {
 			}
+		}
+
+		private void CarReportBindingNavigatorSaveItem_Click(object sender, EventArgs e) {
+			this.Validate();
+			this.carReportDBBindingSource.EndEdit();
+			this.tableAdapterManager.UpdateAll(this.infosys202232DataSet);
+		}
+
+		private void 接続ToolStripMenuItem_Click(object sender, EventArgs e) {
+			this.carReportDBTableAdapter.Fill(this.infosys202232DataSet.CarReportDB);
+		}
+
+		private void dgvCarReport_DataError(object sender, DataGridViewDataErrorEventArgs e) {
+
+		}
+
+		// バイト配列をImageオブジェクトに変換
+		public static Image ByteArrayToImage(byte[] b) {
+			ImageConverter imgconv = new ImageConverter();
+			Image img = (Image)imgconv.ConvertFrom(b);
+			return img;
+		}
+
+		// Imageオブジェクトをバイト配列に変換
+		public static byte[] ImageToByteArray(Image img) {
+			ImageConverter imgconv = new ImageConverter();
+			byte[] b = (byte[])imgconv.ConvertTo(img, typeof(byte[]));
+			return b;
+		}
+
+		public static String DateTimeToString(DateTime dt) {
+			DateTimeConverter dtconv = new DateTimeConverter();
+			String str = (String)dtconv.ConvertTo(dt,typeof(String));
+			return str;
+		}
+
+		public static DateTime StringToDateTime(String str) {
+			DateTimeConverter dtconv = new DateTimeConverter();
+			DateTime dt = (DateTime)dtconv.ConvertFrom(str);
+			return dt;
 		}
 	}
 }
