@@ -18,7 +18,7 @@ namespace CarReportSystem {
 		BindingList<CarReport> listCarReport = new BindingList<CarReport>();
 		public Form1() {
 			InitializeComponent();
-			dgvCarReport.DataSource = listCarReport;
+			//dgvCarReport.DataSource = listCarReport;
 		}
 
 		private void btOpenPicture_Click(object sender, EventArgs e) {
@@ -32,7 +32,7 @@ namespace CarReportSystem {
 		}
 
 		private void btAddReport_Click(object sender, EventArgs e) {
-			CarReport carReport = new CarReport {
+			/*CarReport carReport = new CarReport {
 				Date = dtpDate.Value,
 				Auther = cbAuther.Text,
 				Maker = GetMakerGroups(),
@@ -41,7 +41,18 @@ namespace CarReportSystem {
 				Picture = pbPicture.Image,
 			};
 			listCarReport.Add(carReport);
-			dgvCarReport.Rows[dgvCarReport.RowCount - 1].Selected = true;
+			dgvCarReport.Rows[dgvCarReport.RowCount - 1].Selected = true;*/
+			DataRow newRow = infosys202232DataSet.CarReportDB.NewRow();
+			newRow[1] = dtpDate.Value;
+			newRow[2] = cbAuther.Text;
+			//newRow[3] = GetMakerGroups();
+			newRow[4] = cbCarName.Text;
+			newRow[5] = tbReport.Text;
+			newRow[6] = ImageToByteArray(pbPicture.Image);
+			//データセットへ新しいレコードを追加
+			infosys202232DataSet.CarReportDB.Rows.Add(newRow);
+			//データベース更新
+			this.carReportDBTableAdapter.Update(this.infosys202232DataSet.CarReportDB);
 		}
 		private List<CarReport.MakerGroup> GetMakerGroups() {
 			var listMaker = new List<CarReport.MakerGroup>();
@@ -96,14 +107,12 @@ namespace CarReportSystem {
 			cbCarName.Text = listCarReport[index].CarName;
 			tbReport.Text = listCarReport[index].Report;
 			pbPicture.Image = listCarReport[index].Picture;*/
-			if (dgvCarReport.CurrentRow == null) {
-				return;
-			}
-			dtpDate.Value = 
+			
+			dtpDate.Value = DateTime.Parse(dgvCarReport.CurrentRow.Cells[1].Value.ToString());
 			cbAuther.Text = dgvCarReport.CurrentRow.Cells[2].Value.ToString();
-			cbCarName.Text = dgvCarReport.CurrentRow.Cells[3].Value.ToString();
-			tbReport.Text = dgvCarReport.CurrentRow.Cells[4].Value.ToString();
-			if (!(dgvCarReport.CurrentRow.Cells[5].Value is DBNull)) {
+			cbCarName.Text = dgvCarReport.CurrentRow.Cells[4].Value.ToString();
+			tbReport.Text = dgvCarReport.CurrentRow.Cells[5].Value.ToString();
+			if (!(dgvCarReport.CurrentRow.Cells[6].Value is DBNull)) {
 				pbPicture.Image = ByteArrayToImage((byte[])dgvCarReport.CurrentRow.Cells[6].Value);
 			} else {
 				pbPicture.Image = null;
@@ -213,16 +222,24 @@ namespace CarReportSystem {
 			return b;
 		}
 
-		public static String DateTimeToString(DateTime dt) {
-			DateTimeConverter dtconv = new DateTimeConverter();
-			String str = (String)dtconv.ConvertTo(dt,typeof(String));
-			return str;
+		private void tsmiUpdate_Click(object sender, EventArgs e) {
+			dgvCarReport.CurrentRow.Cells[1].Value = dtpDate.Value;
+			dgvCarReport.CurrentRow.Cells[2].Value = cbAuther.Text;
+			dgvCarReport.CurrentRow.Cells[3].Value = GetMakerGroups();
+			dgvCarReport.CurrentRow.Cells[4].Value = cbCarName.Text;
+			dgvCarReport.CurrentRow.Cells[5].Value = tbReport.Text;
+			dgvCarReport.CurrentRow.Cells[6].Value = ImageToByteArray(pbPicture.Image);
+			this.Validate();
+			this.carReportDBBindingSource.EndEdit();
+			this.tableAdapterManager.UpdateAll(this.infosys202232DataSet);
 		}
 
-		public static DateTime StringToDateTime(String str) {
-			DateTimeConverter dtconv = new DateTimeConverter();
-			DateTime dt = (DateTime)dtconv.ConvertFrom(str);
-			return dt;
+		private void btClear_Click(object sender, EventArgs e) {
+			dtpDate.Value = DateTime.Now;
+			cbAuther.Text = null;
+			cbCarName.Text = null;
+			tbReport.Clear();
+			pbPicture.Image = null;
 		}
 	}
 }
