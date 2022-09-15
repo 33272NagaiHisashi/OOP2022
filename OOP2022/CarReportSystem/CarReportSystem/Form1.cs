@@ -18,7 +18,6 @@ namespace CarReportSystem {
 		BindingList<CarReport> listCarReport = new BindingList<CarReport>();
 		public Form1() {
 			InitializeComponent();
-			//dgvCarReport.DataSource = listCarReport;
 		}
 
 		private void btOpenPicture_Click(object sender, EventArgs e) {
@@ -32,20 +31,10 @@ namespace CarReportSystem {
 		}
 
 		private void btAddReport_Click(object sender, EventArgs e) {
-			/*CarReport carReport = new CarReport {
-				Date = dtpDate.Value,
-				Auther = cbAuther.Text,
-				Maker = GetMakerGroups(),
-				CarName = cbCarName.Text,
-				Report = tbReport.Text,
-				Picture = pbPicture.Image,
-			};
-			listCarReport.Add(carReport);
-			dgvCarReport.Rows[dgvCarReport.RowCount - 1].Selected = true;*/
 			DataRow newRow = infosys202232DataSet.CarReportDB.NewRow();
 			newRow[1] = dtpDate.Value;
 			newRow[2] = cbAuther.Text;
-			//newRow[3] = GetMakerGroups();
+			newRow[3] = GetRadioButton();
 			newRow[4] = cbCarName.Text;
 			newRow[5] = tbReport.Text;
 			newRow[6] = ImageToByteArray(pbPicture.Image);
@@ -54,62 +43,31 @@ namespace CarReportSystem {
 			//データベース更新
 			this.carReportDBTableAdapter.Update(this.infosys202232DataSet.CarReportDB);
 		}
-		private List<CarReport.MakerGroup> GetMakerGroups() {
-			var listMaker = new List<CarReport.MakerGroup>();
+
+		private string GetRadioButton() {
 			if (rbToyota.Checked) {
-				listMaker.Add(CarReport.MakerGroup.トヨタ);
+				return "トヨタ";
 			}
 			if (rbNissan.Checked) {
-				listMaker.Add(CarReport.MakerGroup.日産);
+				return "日産";
 			}
 			if (rbHonda.Checked) {
-				listMaker.Add(CarReport.MakerGroup.ホンダ);
+				return "ホンダ";
 			}
 			if (rbSubaru.Checked) {
-				listMaker.Add(CarReport.MakerGroup.スバル);
+				return "スバル";
 			}
 			if (rbForeignCar.Checked) {
-				listMaker.Add(CarReport.MakerGroup.外国車);
+				return "外国車";
 			}
-			if (rbOthers.Checked) {
-				listMaker.Add(CarReport.MakerGroup.その他);
-			}
-			return listMaker;
-		}
-
-		private void btFixRecord_Click(object sender, EventArgs e) {
-			if (dgvCarReport.CurrentRow == null) return;
-
-			listCarReport[dgvCarReport.CurrentRow.Index].Date = dtpDate.Value;
-			listCarReport[dgvCarReport.CurrentRow.Index].Auther = cbAuther.Text;
-			listCarReport[dgvCarReport.CurrentRow.Index].CarName = cbCarName.Text;
-			listCarReport[dgvCarReport.CurrentRow.Index].Report = tbReport.Text;
-			listCarReport[dgvCarReport.CurrentRow.Index].Picture = pbPicture.Image;
-			listCarReport[dgvCarReport.CurrentRow.Index].Maker = GetMakerGroups();
-
-			dgvCarReport.Refresh();
-		}
-
-		private void btDeleteRecord_Click(object sender, EventArgs e) { 
-			if (dgvCarReport.CurrentRow == null) return;
-			int index = dgvCarReport.CurrentRow.Index;
-			listCarReport.RemoveAt(index);
-
+			return "その他";
 		}
 
 		private void dgvCarReport_Click(object sender, EventArgs e) {
-			/*if (dgvCarReport.CurrentRow == null) return;
-
-			int index = dgvCarReport.CurrentRow.Index;
-
-			dtpDate.Value = listCarReport[index].Date;
-			cbAuther.Text = listCarReport[index].Auther;
-			cbCarName.Text = listCarReport[index].CarName;
-			tbReport.Text = listCarReport[index].Report;
-			pbPicture.Image = listCarReport[index].Picture;*/
 			
 			dtpDate.Value = DateTime.Parse(dgvCarReport.CurrentRow.Cells[1].Value.ToString());
 			cbAuther.Text = dgvCarReport.CurrentRow.Cells[2].Value.ToString();
+			setMarkerRadioSet(dgvCarReport.CurrentRow.Cells[3].Value.ToString());
 			cbCarName.Text = dgvCarReport.CurrentRow.Cells[4].Value.ToString();
 			tbReport.Text = dgvCarReport.CurrentRow.Cells[5].Value.ToString();
 			if (!(dgvCarReport.CurrentRow.Cells[6].Value is DBNull)) {
@@ -225,7 +183,7 @@ namespace CarReportSystem {
 		private void tsmiUpdate_Click(object sender, EventArgs e) {
 			dgvCarReport.CurrentRow.Cells[1].Value = dtpDate.Value;
 			dgvCarReport.CurrentRow.Cells[2].Value = cbAuther.Text;
-			dgvCarReport.CurrentRow.Cells[3].Value = GetMakerGroups();
+			dgvCarReport.CurrentRow.Cells[3].Value = GetRadioButton();
 			dgvCarReport.CurrentRow.Cells[4].Value = cbCarName.Text;
 			dgvCarReport.CurrentRow.Cells[5].Value = tbReport.Text;
 			dgvCarReport.CurrentRow.Cells[6].Value = ImageToByteArray(pbPicture.Image);
@@ -240,6 +198,43 @@ namespace CarReportSystem {
 			cbCarName.Text = null;
 			tbReport.Clear();
 			pbPicture.Image = null;
+		}
+
+		private void btSearch_Click(object sender, EventArgs e) {
+			carReportDBTableAdapter.FillBy(infosys202232DataSet.CarReportDB, tbSearch.Text);
+		}
+
+		private void btClearSearch_Click(object sender, EventArgs e) {
+			tbSearch.Clear();
+			carReportDBTableAdapter.FillBy(infosys202232DataSet.CarReportDB, "");
+		}
+		
+		private void setMarkerRadioSet(string Marker) {
+			switch (Marker) {
+				case "トヨタ":
+					rbToyota.Checked = true;
+					break;
+				case "日産":
+					rbNissan.Checked = true;
+					break;
+				case "ホンダ":
+					rbHonda.Checked = true;
+					break;
+				case "スバル":
+					rbSubaru.Checked = true;
+					break;
+				case "外国車":
+					rbForeignCar.Checked = true;
+					break;
+				case "その他":
+					rbOthers.Checked = true;
+					break;
+			}
+		}
+
+		private void btDelete_Click(object sender, EventArgs e) {
+			carReportDBBindingSource.RemoveAt(dgvCarReport.CurrentRow.Index);
+			this.tableAdapterManager.UpdateAll(this.infosys202232DataSet);
 		}
 	}
 }
