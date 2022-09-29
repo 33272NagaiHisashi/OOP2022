@@ -10,6 +10,6 @@ namespace SampleEntityFramework.Models {
 		public string Name { get; set; }
 		public DateTime Birthday { get; set; }
 		public string Gender { get; set; }
-		public virtual ICollection<Book> Books { get; set; }
+		public virtual Book Books { get; set; }
 	}
 }
