@@ -7,38 +7,54 @@ using System.Threading.Tasks;
 namespace Exercise1 {
     class Program {
         static void Main(string[] args) {
-            Exercise1_1();
-            Console.WriteLine();
             Exercise1_2();
-            Console.WriteLine();
+            Console.WriteLine("----------");
             Exercise1_3();
-            Console.WriteLine();
+            Console.WriteLine("----------");
             Exercise1_4();
-            Console.WriteLine();
+            Console.WriteLine("----------");
             Exercise1_5();
-            Console.WriteLine();
+            Console.WriteLine("----------");
             Exercise1_6();
-            Console.WriteLine();
+            Console.WriteLine("----------");
             Exercise1_7();
-            Console.WriteLine();
+            Console.WriteLine("----------");
             Exercise1_8();
+
             Console.ReadLine();
         }
 
-		private static void Exercise1_1() {
-
-		}
-
 		private static void Exercise1_2() {
-			
+			var selected = Library.Books.Where(b => b.Price == Library.Books.Max(x => x.Price)).First();
+			Console.WriteLine(selected);
 		}
 
 		private static void Exercise1_3() {
-			
+			var countYears = Library.Books.OrderBy(b => b.PublishedYear)
+										  .GroupBy(b => b.PublishedYear)
+										  .Select(s => new {
+											  Year = s.Key,
+											  Count = s.Count()
+										  });
+			foreach (var c in countYears) {
+				Console.WriteLine($"{c.Year}年 {c.Count}冊");
+			}
 		}
 
 		private static void Exercise1_4() {
-			
+			var selected = Library.Books.OrderByDescending(b => b.PublishedYear)
+										.ThenByDescending(b => b.Price)
+										.Join(Library.Categories, book => book.CategoryId,
+																  category => category.Id,
+																  (book, category) => new {
+																	  Title = book.Title,
+																	  Name = category.Name,
+																	  PublishedYear = book.PublishedYear,
+																	  Price = book.Price,
+																  });
+			foreach (var book in selected) {
+				Console.WriteLine($"{book.PublishedYear}年 {book.Price}円 {book.Title} ({book.Name})");
+			}
 		}
 
 		private static void Exercise1_5() {
