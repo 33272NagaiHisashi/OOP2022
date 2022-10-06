@@ -25,7 +25,8 @@ namespace Exercise1 {
         }
 
 		private static void Exercise1_2() {
-			var selected = Library.Books.Where(b => b.Price == Library.Books.Max(x => x.Price)).First();
+			var selected = Library.Books.Where(b => b.Price == Library.Books.Max(x => x.Price))
+										.First();
 			Console.WriteLine(selected);
 		}
 
@@ -58,7 +59,15 @@ namespace Exercise1 {
 		}
 
 		private static void Exercise1_5() {
-			
+			var selected = Library.Books.Where(b => b.PublishedYear == 2016)
+										.Join(Library.Categories, book => book.CategoryId,
+																  category => category.Id,
+																  (book, category) => new {
+																	  Name = category.Name
+																  });		
+			foreach (var s in selected.GroupBy(g => g.Name)) {
+				Console.WriteLine(s.Key);
+			}
 		}
 
 		private static void Exercise1_6() {
