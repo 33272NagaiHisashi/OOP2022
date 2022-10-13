@@ -5,15 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SampleApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Width="300" Height="300" FontSize="14">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="btOk" Content="OK" Width="75" Margin="5"/>
-            <Button x:Name="btCancel" Content="キャンセル" Width="75" Margin="5"/>
+        Title="MainWindow" Width="300" Height="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="AUTO"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="項目"/>
+        <TextBlock Grid.Column="2" Text="設定値"/>
+        <Label Grid.Row="1" Content="ON/OFF(_O)" Target="{Binding ElementName=cb, Mode=OneWay}"/>
+        <CheckBox x:Name="cb" Grid.Row="1" Grid.Column="1" 
+                  Content="チェックしたらON" VerticalAlignment="Center"
+                  Checked="cb_Checked" Unchecked="cb_Unchecked"/>
+        <TextBlock x:Name="checkBoxTextBlock" Grid.Row="1" Grid.Column="2"
+                   VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="色(_C)" Target="{Binding ElementName=rbRed, Mode=OneWay}"/>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <RadioButton x:Name="rbRed" GroupName="Color"
+                         Content="赤" Checked="rbRed_Checked"/>
+            <RadioButton x:Name="rbYellow" GroupName="Color"
+                         Content="黄" Checked="rbYellow_Checked"/>
+            <RadioButton x:Name="rbBlue" GroupName="Color"
+                         Content="青" Checked="rbBlue_Checked"
+                         Margin="0,0,4,0"/>
         </StackPanel>
-        <StackPanel>
-            <TextBlock TextWrapping="Wrap" Text="メッセージを入力してください"/>
-            <TextBox x:Name="tbMessage" Height="23" TextWrapping="Wrap" Width="120"/>
-        </StackPanel>
-    </DockPanel>
+        <TextBlock x:Name="tbColor" Grid.Row="2" Grid.Column="2"/>
+        <Label Grid.Row="3" Content="季節(_S)" Target="{Binding ElementName=cbSeason, Mode=OneWay}"/>
+        <ComboBox x:Name="cbSeason" Grid.Row="3"
+                  Grid.Column="1" SelectionChanged="cbSeason_SelectionChanged"
+                  SelectedIndex="0">
+            <ComboBoxItem Content="春"/>
+            <ComboBoxItem Content="夏"/>
+            <ComboBoxItem Content="秋"/>
+            <ComboBoxItem Content="冬"/>
+        </ComboBox>
+        <TextBlock x:Name="tblockSeason" Grid.Row="3" Grid.Column="2"/>
+    </Grid>
 </Window>

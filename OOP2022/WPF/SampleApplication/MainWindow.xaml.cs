@@ -25,5 +25,29 @@ namespace SampleApplication {
 		private void Button_Click(object sender, RoutedEventArgs e) {
 			MessageBox.Show("ボタンが押された！");
 		}
+
+		private void cb_Checked(object sender, RoutedEventArgs e) {
+			checkBoxTextBlock.Text = "チェック済";
+		}
+
+		private void cb_Unchecked(object sender, RoutedEventArgs e) {
+			checkBoxTextBlock.Text = "未チェック";
+		}
+
+		private void rbRed_Checked(object sender, RoutedEventArgs e) {
+			tbColor.Text = "赤";
+		}
+
+		private void rbYellow_Checked(object sender, RoutedEventArgs e) {
+			tbColor.Text = "黄";
+		}
+
+		private void rbBlue_Checked(object sender, RoutedEventArgs e) {
+			tbColor.Text = "青";
+		}
+
+		private void cbSeason_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+			tblockSeason.Text = (string)((ComboBoxItem)cbSeason.SelectedItem).Content;
+		}
 	}
 }
