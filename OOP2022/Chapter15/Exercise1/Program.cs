@@ -62,24 +62,54 @@ namespace Exercise1 {
 			var selected = Library.Books.Where(b => b.PublishedYear == 2016)
 										.Join(Library.Categories, book => book.CategoryId,
 																  category => category.Id,
-																  (book, category) => new {
-																	  Name = category.Name
-																  });		
-			foreach (var s in selected.GroupBy(g => g.Name)) {
-				Console.WriteLine(s.Key);
+																  (book, category) => category.Name)
+										.Distinct();		
+			foreach (var s in selected) {
+				Console.WriteLine(s);
 			}
 		}
 
 		private static void Exercise1_6() {
-			
+			var group = Library.Categories.GroupJoin(Library.Books, c => c.Id,
+																	b => b.CategoryId,
+																	(c, b) => new {
+																		Category = c.Name,
+																		Book = b
+																	})
+										  .OrderBy(o=>o.Category);
+			foreach (var s in group) {
+				Console.WriteLine("#"+s.Category);
+				foreach (var g in s.Book) {
+					Console.WriteLine($"	{g.Title}");
+				}
+			}
 		}
 
 		private static void Exercise1_7() {
+			var categoryId = Library.Categories.Single(c => c.Name == "Development").Id;
+			var group = Library.Books.Where(w=>w.CategoryId == categoryId)
+									 .GroupBy(b => b.PublishedYear)
+									 .OrderBy(o => o.Key);
 			
+			foreach (var g in group) {
+				Console.WriteLine($"#{g.Key}年");
+				foreach(var b in g) {
+					Console.WriteLine($"	{b.Title}");
+				}
+			}
 		}
 
 		private static void Exercise1_8() {
-			
+			var groups = Library.Categories.GroupJoin(Library.Books, c => c.Id,
+																	b => b.CategoryId,
+																	(c, b) => new {
+																		Name = c.Name,
+																		Count = b.Count()
+																	})
+											.Where(w=>w.Count >= 4);
+			foreach (var g in groups) {
+				Console.WriteLine(g.Name);
+			}
 		}
 	}
 }
