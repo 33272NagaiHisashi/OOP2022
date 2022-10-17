@@ -20,6 +20,48 @@ namespace SampleApplication {
 	public partial class MainWindow : Window {
 		public MainWindow() {
 			InitializeComponent();
+			cbSeason.SelectedIndex = getMonth();
+		}
+
+		private int getMonth() {
+			DateTime stNow = DateTime.Now;
+			var month = stNow.Month;
+			var ret = 0;
+			/*if(month >= 3 || month <= 5) {
+				ret = 0;
+			}
+			if (month >= 6 || month <= 8) {
+				ret = 1;
+			}
+			if (month >= 9 || month <= 11) {
+				ret = 2;
+			}
+			if (month >= 12 || month <= 2) {
+				ret = 3;
+			}*/
+			switch (month) {
+				case 3:
+				case 4:
+				case 5:
+					ret = 0;
+					break;
+				case 6:
+				case 7:
+				case 8:
+					ret = 1;
+					break;
+				case 9:
+				case 10:
+				case 11:
+					ret = 2;
+					break;
+				case 12:
+				case 1:
+				case 2:
+					ret = 3;
+					break;
+			}
+			return ret;
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e) {

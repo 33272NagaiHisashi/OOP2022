@@ -40,8 +40,7 @@
         <TextBlock x:Name="tbColor" Grid.Row="2" Grid.Column="2"/>
         <Label Grid.Row="3" Content="季節(_S)" Target="{Binding ElementName=cbSeason, Mode=OneWay}"/>
         <ComboBox x:Name="cbSeason" Grid.Row="3"
-                  Grid.Column="1" SelectionChanged="cbSeason_SelectionChanged"
-                  SelectedIndex="0">
+                  Grid.Column="1" SelectionChanged="cbSeason_SelectionChanged">
             <ComboBoxItem Content="春"/>
             <ComboBoxItem Content="夏"/>
             <ComboBoxItem Content="秋"/>
