@@ -1,7 +1,6 @@
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\bin\Debug\CarReportSystem.exe.config
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\bin\Debug\CarReportSystem.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\bin\Debug\CarReportSystem.pdb
-C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.csproj.AssemblyReference.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.Form1.resources
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.Properties.Resources.resources
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.csproj.GenerateResource.cache

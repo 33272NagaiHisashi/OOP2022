@@ -1,7 +1,6 @@
-C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\obj\Debug\Exercise01.csproj.CoreCompileInputs.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\bin\Debug\Exercise01.exe.config
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\bin\Debug\Exercise01.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\bin\Debug\Exercise01.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\obj\Debug\Exercise01.csproj.CoreCompileInputs.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\obj\Debug\Exercise01.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\obj\Debug\Exercise01.pdb
-C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter06\Exercise01\obj\Debug\Exercise01.csproj.AssemblyReference.cache

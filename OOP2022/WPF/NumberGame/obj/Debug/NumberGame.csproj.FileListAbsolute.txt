@@ -1,6 +1,7 @@
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\bin\Debug\NumberGame.exe.config
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\bin\Debug\NumberGame.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\bin\Debug\NumberGame.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\NumberGame.csproj.AssemblyReference.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\MainWindow.g.cs
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\App.g.cs
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\NumberGame_MarkupCompile.cache
@@ -12,4 +13,3 @@ C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\NumberGame.csproj.CoreCompileInputs.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\NumberGame.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\NumberGame.pdb
-C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\NumberGame\obj\Debug\NumberGame.csproj.AssemblyReference.cache
