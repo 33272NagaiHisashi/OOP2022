@@ -1,0 +1,15 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\SampleSlider.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\App.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\SampleSlider.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\SampleSlider.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\WpfApp1\obj\Debug\WpfApp1.pdb
