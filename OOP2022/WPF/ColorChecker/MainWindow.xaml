@@ -5,72 +5,92 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorChecker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
+        Title="MainWindow" Height="600" Width="1000" Loaded="Window_Loaded">
     <Grid Margin="0,0,0,4">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"/>
-            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="2">
+        <Label x:Name="lColor" Margin="50,50,50,50"/>
+        <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Content="R"
-                   FontSize="70"
-                   HorizontalAlignment="Center"
-                   Grid.Row="1"/>
-            <Slider x:Name="sRed"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="3" 
-                    VerticalAlignment="Center"/>
-            <TextBlock Text="{Binding ElementName=sRed,Path=Value,UpdateSourceTrigger=PropertyChanged}"
-                       Grid.Row="1"
-                       Grid.Column="4"
-                       FontSize="70"
-                       HorizontalAlignment="Center"/>
-            
-            <Label Content="G"
-                   FontSize="70"
-                   HorizontalAlignment="Center"
-                   Grid.Row="2"/>
-            <Slider x:Name="sGreen"
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="3"
-                    VerticalAlignment="Center"/>
-            <TextBlock Text="{Binding ElementName=sRed,Path=Value,UpdateSourceTrigger=PropertyChanged}"
-                       Grid.Row="2"
-                       Grid.Column="4"
-                       FontSize="70"
-                       HorizontalAlignment="Center"/>
 
-            <Label Content="B"
-                   FontSize="70"
-                   Grid.Row="3"
-                   HorizontalAlignment="Center"/>
-            <Slider x:Name="sBlue"
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="3"
-                    VerticalAlignment="Center"/>
-            <TextBlock Text="{Binding ElementName=sBlue,Path=Value,UpdateSourceTrigger=PropertyChanged}"
-                       Grid.Row="3"
-                       Grid.Column="4"
-                       FontSize="70"
-                       HorizontalAlignment="Center"/>
+            <Label Content="R" FontSize="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Grid.Row="1"/>
+            <Slider x:Name="sRed" Maximum="255"
+                    IsSnapToTickEnabled="True" TickFrequency="1"
+                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" 
+                    VerticalAlignment="Center" ValueChanged="Slider_ValueChanged"/>
+            <TextBox x:Name="tbRed"
+                     Text="{Binding ElementName=sRed,Path=Value,UpdateSourceTrigger=PropertyChanged}"
+                     Grid.Row="1" Grid.Column="4" FontSize="30"
+                     VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+            <Label Content="G" FontSize="50"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Grid.Row="2"/>
+            <Slider x:Name="sGreen" Maximum="255"
+                    IsSnapToTickEnabled="True" TickFrequency="1"
+                    Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                    VerticalAlignment="Center" ValueChanged="Slider_ValueChanged"/>
+            <TextBox x:Name="tbGreen"
+                     Text="{Binding ElementName=sGreen,Path=Value,UpdateSourceTrigger=PropertyChanged}"
+                     Grid.Row="2" Grid.Column="4" FontSize="30"
+                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <Label Content="B" FontSize="50" Grid.Row="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Slider x:Name="sBlue" Maximum="255"
+                    IsSnapToTickEnabled="True" TickFrequency="1"
+                    Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
+                    VerticalAlignment="Center" ValueChanged="Slider_ValueChanged"/>
+            <TextBox x:Name="tbBlue"
+                     Text="{Binding ElementName=sBlue,Path=Value,UpdateSourceTrigger=PropertyChanged}"
+                     Grid.Row="3" Grid.Column="4" FontSize="30"
+                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <ComboBox ItemsSource="{Binding}" SelectedValue="{Binding Color}" VerticalContentAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="4" RenderTransformOrigin="5.357,3.409" Grid.ColumnSpan="3" Width="198" Margin="0,0,0,50" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="20" Height="Auto" Margin="5,0" BorderThickness="1" BorderBrush="Black">
+                                <Border.Background>
+                                    <SolidColorBrush Color="{Binding Color}"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Content="STOCK" FontSize="20" Margin="10,5" Click="Button_Click"/>
+            <ListBox x:Name="stockList" Grid.Row="1" SelectionChanged="stockList_SelectionChanged"/>
         </Grid>
     </Grid>
 </Window>
