@@ -60,7 +60,10 @@ namespace ColorChecker {
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e) {
-
+			MyColor myColor = new MyColor {
+				Color = Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text))
+			};
+			stockLi
 		}
 
 		private void stockList_SelectionChanged(object sender, SelectionChangedEventArgs e) {

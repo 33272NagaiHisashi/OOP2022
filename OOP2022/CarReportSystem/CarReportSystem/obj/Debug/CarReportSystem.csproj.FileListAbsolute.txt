@@ -7,3 +7,4 @@ C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.csproj.CoreCompileInputs.cache
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.exe
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\CarReportSystem\CarReportSystem\obj\Debug\CarReportSystem.csproj.AssemblyReference.cache
