@@ -19,8 +19,8 @@ namespace ColorChecker {
 	/// MainWindow.xaml の相互作用ロジック
 	/// </summary>
 	public partial class MainWindow : Window {
+		List<MyColor> stockMyColors = new List<MyColor>();
 		public MainWindow() {
-			List<MyColor> stockMyColors = new List<MyColor>();
 			InitializeComponent();
 			DataContext = GetColorList();
 		}
@@ -32,7 +32,7 @@ namespace ColorChecker {
 		private void Window_Loaded(object sender, RoutedEventArgs e) {
 			setColor();
 		}
-		private void Slider_ValueChanged(Object sender,RoutedPropertyChangedEventArgs<double> e) {
+		private void Slider_ValueChanged(Object sender, RoutedPropertyChangedEventArgs<double> e) {
 			setColor();
 		}
 
@@ -55,32 +55,48 @@ namespace ColorChecker {
 			var G = byte.Parse(tbGreen.Text);
 			var B = byte.Parse(tbBlue.Text);
 
-			SolidColorBrush scb = new SolidColorBrush(Color.FromRgb(R,G,B));
+			SolidColorBrush scb = new SolidColorBrush(Color.FromRgb(R, G, B));
 			lColor.Background = scb;
 		}
 
-		private void Button_Click(object sender, RoutedEventArgs e) {
-			/*MyColor myColor = new MyColor {
-				Color = Color.(tbRed.Text, byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text))
-			};*/
-		}
-
 		private void btStock_Click(object sender, RoutedEventArgs e) {
-			stockList.Items.Add($"R :{tbRed.Text} G :{tbGreen.Text} B :{tbBlue.Text}");
+			
+			MyColor myColor = new MyColor {
+				Color = Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text))
+			};
+			var colorName = ((IEnumerable<MyColor>)DataContext).Where(c => c.Color.R == Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text)).R &&
+																		  c.Color.G == Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text)).G &&
+																		  c.Color.B == Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text)).B).FirstOrDefault();
+			stockList.Items.Insert(0,$"R :{myColor.Color.R.ToString()} G :{myColor.Color.G.ToString()} B :{myColor.Color.B.ToString()}");
+			//stockList.Items.Insert(0, $"R :{tbRed.Text} G :{tbGreen.Text} B :{tbBlue.Text}");
 		}
 
-		private void  btDelete_Click(object sender, RoutedEventArgs e) {
+		private void btDelete_Click(object sender, RoutedEventArgs e) {
 			if (stockList.SelectedIndex == -1) return;
 			int sel = stockList.SelectedIndex;
 			stockList.Items.RemoveAt(sel);
 		}
-	}
-	/// <summary>
-	/// 色と色名を保持するクラス
-	/// </summary>
-	public class MyColor {
-		public Color Color { get; set; }
-		public string Name { get; set; }
+
+		private void stockList_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+			var index = stockList.SelectedIndex;
+
+			/*tbRed.Text = stockMyColors[index].Color.R.ToString();
+			tbGreen.Text = stockMyColors[index].Color.G.ToString();
+			tbBlue.Text = stockMyColors[index].Color.B.ToString();*/
+
+			sRed.Value = stockMyColors[index].Color.R;
+			sGreen.Value = stockMyColors[index].Color.G;
+			sBlue.Value = stockMyColors[index].Color.B;
+
+			setColor();
+		}
+		/// <summary>
+		/// 色と色名を保持するクラス
+		/// </summary>
+		public class MyColor {
+			public Color Color { get; set; }
+			public string Name { get; set; }
+		}
 	}
 }
 
