@@ -88,9 +88,11 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Content="STOCK" FontSize="20" Margin="10,5" Click="Button_Click"/>
-            <ListBox x:Name="stockList" Grid.Row="1" SelectionChanged="stockList_SelectionChanged" Margin="15,15,15,15" Grid.RowSpan="2"/>
+            <Button Grid.Column="0" x:Name="btStock" Content="STOCK" FontSize="20" Margin="10,5" Click="btStock_Click"/>
+            <Button Grid.Column="1" x:Name="btDelete" Content="DELETE" FontSize="20" Margin="10,5" Click="btDelete_Click"/>
+            <ListBox x:Name="stockList" Grid.Row="1" SelectionChanged="stockList_SelectionChanged" Margin="15,15,15,15" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         </Grid>
     </Grid>
 </Window>

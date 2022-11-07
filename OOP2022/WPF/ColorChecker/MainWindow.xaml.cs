@@ -60,14 +60,19 @@ namespace ColorChecker {
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e) {
-			MyColor myColor = new MyColor {
-				Color = Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text))
-			};
-			stockLi
+			/*MyColor myColor = new MyColor {
+				Color = Color.(tbRed.Text, byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text))
+			};*/
 		}
 
-		private void stockList_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+		private void btStock_Click(object sender, RoutedEventArgs e) {
+			stockList.Items.Add($"R :{tbRed.Text} G :{tbGreen.Text} B :{tbBlue.Text}");
+		}
 
+		private void  btDelete_Click(object sender, RoutedEventArgs e) {
+			if (stockList.SelectedIndex == -1) return;
+			int sel = stockList.SelectedIndex;
+			stockList.Items.RemoveAt(sel);
 		}
 	}
 	/// <summary>
