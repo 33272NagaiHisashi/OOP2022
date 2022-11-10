@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ColorChecker {
+namespace ColorChecker2 {
 	/// <summary>
 	/// MainWindow.xaml の相互作用ロジック
 	/// </summary>
@@ -60,42 +60,35 @@ namespace ColorChecker {
 		}
 
 		private void btStock_Click(object sender, RoutedEventArgs e) {
-			var stColor = GetMyColor(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text));
-			stockList.Items.Insert(0,stColor.Name ?? $"R :{stColor.Color.R} G :{stColor.Color.G} B :{stColor.Color.B}");
-			stockMyColors.Insert(0, stColor);
+
+			MyColor myColor = new MyColor {
+				Color = Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text))
+			};
+			var colorName = ((IEnumerable<MyColor>)DataContext).Where(c => c.Color.R == Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text)).R &&
+																		  c.Color.G == Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text)).G &&
+																		  c.Color.B == Color.FromRgb(byte.Parse(tbRed.Text), byte.Parse(tbGreen.Text), byte.Parse(tbBlue.Text)).B).FirstOrDefault();
+			stockList.Items.Insert(0, $"R :{myColor.Color.R.ToString()} G :{myColor.Color.G.ToString()} B :{myColor.Color.B.ToString()}");
+			//stockList.Items.Insert(0, $"R :{tbRed.Text} G :{tbGreen.Text} B :{tbBlue.Text}");
 		}
 
 		private void btDelete_Click(object sender, RoutedEventArgs e) {
 			if (stockList.SelectedIndex == -1) return;
-			var index = stockList.SelectedIndex;
-			stockList.Items.RemoveAt(index);
-			stockMyColors.RemoveAt(index);
+			int sel = stockList.SelectedIndex;
+			stockList.Items.RemoveAt(sel);
 		}
 
 		private void stockList_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-			if (stockList.SelectedIndex == -1) return;
 			var index = stockList.SelectedIndex;
 
-			tbRed.Text = stockMyColors[index].Color.R.ToString();
+			/*tbRed.Text = stockMyColors[index].Color.R.ToString();
 			tbGreen.Text = stockMyColors[index].Color.G.ToString();
-			tbBlue.Text = stockMyColors[index].Color.B.ToString();
-			
-			/*sRed.Value = stockMyColors[index].Color.R;
+			tbBlue.Text = stockMyColors[index].Color.B.ToString();*/
+
+			sRed.Value = stockMyColors[index].Color.R;
 			sGreen.Value = stockMyColors[index].Color.G;
-			sBlue.Value = stockMyColors[index].Color.B;*/
+			sBlue.Value = stockMyColors[index].Color.B;
 
 			setColor();
-		}
-
-		private MyColor GetMyColor(byte R, byte G, byte B) {
-			return new MyColor {
-				Color = Color.FromRgb(R, G, B),
-				Name = ((IEnumerable<MyColor>)DataContext).Where(c => c.Color.R == R &&
-																	  c.Color.G == G &&
-																	  c.Color.B == B)
-														　.Select(c => c.Name).FirstOrDefault()
-		};
-
 		}
 		/// <summary>
 		/// 色と色名を保持するクラス
