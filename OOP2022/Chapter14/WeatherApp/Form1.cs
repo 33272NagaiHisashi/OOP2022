@@ -21,11 +21,11 @@ namespace WeatherApp {
 			var wc = new WebClient() {
 				Encoding = Encoding.UTF8
 			};
-			var downloadString = wc.DownloadString("https://www.jma.go.jp/bosai/common/const/area.json");
+			var downloadString = wc.DownloadString("https://www.jma.go.jp/bosai/forecast/data/forecast/100000.json");
 
-			var json = JsonConvert.DeserializeObject<Centers>(downloadString);
+			var json = JsonConvert.DeserializeObject<Class1[]>(downloadString);
 
-			tbWeatherInfo.Text = json._010100.ToString();
+			tbWeatherInfo.Text = json[0].publishingOffice;
 		}
 	}
 }

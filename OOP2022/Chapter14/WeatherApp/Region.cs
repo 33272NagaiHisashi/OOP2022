@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherApp {
 
-	public class Rootobject2 {
+	public class Rootobject {
 		public Centers centers { get; set; }
 		public Offices offices { get; set; }
 		public Class10s class10s { get; set; }
@@ -19038,5 +19038,4 @@ namespace WeatherApp {
 		public string kana { get; set; }
 		public string parent { get; set; }
 	}
-
 }
