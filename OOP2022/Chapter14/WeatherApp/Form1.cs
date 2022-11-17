@@ -18,14 +18,10 @@ namespace WeatherApp {
 		}
 
 		private void btAcquisition_Click(object sender, EventArgs e) {
-			var wc = new WebClient() {
-				Encoding = Encoding.UTF8
-			};
-			var downloadString = wc.DownloadString("https://www.jma.go.jp/bosai/forecast/data/forecast/100000.json");
-
-			var json = JsonConvert.DeserializeObject<Class1[]>(downloadString);
-
-			tbWeatherInfo.Text = json[0].publishingOffice;
+			var wc = new WebClient();
+			wc.Encoding = Encoding.UTF8;
+			var downloadString = wc.DownloadString("https://www.jma.go.jp/bosai/common/const/area.json");
+			var json = JsonConvert.DeserializeObject<_010100>(downloadString);
 		}
 	}
 }
