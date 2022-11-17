@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,17 @@ using System.Windows.Forms;
 
 namespace WeatherApp {
 	public partial class Form1 : Form {
+		string url = "https://www.jma.go.jp/bosai/forecast/data/forecast/100000.json";
 		public Form1() {
 			InitializeComponent();
 		}
 
-		private void btAcquisition_Click(object sender, EventArgs e) {
+		private void Form1_Load(object sender, EventArgs e) {
 			var wc = new WebClient();
 			wc.Encoding = Encoding.UTF8;
-			var downloadString = wc.DownloadString("https://www.jma.go.jp/bosai/common/const/area.json");
-			var json = JsonConvert.DeserializeObject<_010100>(downloadString);
+			var downloadString = wc.DownloadString(url);
+			var json = JsonConvert.DeserializeObject<Class1[]>(downloadString);
+			tbPublishingOffice.Text = json[0].publishingOffice;
 		}
 	}
 }

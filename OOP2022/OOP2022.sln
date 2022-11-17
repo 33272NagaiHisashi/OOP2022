@@ -42,6 +42,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise04", "Chapter05\Exercise04\Exercise04.csproj", "{025FAA7D-537B-4951-A6E5-0B9EBBD0538E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter06", "Chapter06", "{DE24C544-1423-4BD4-B0A0-D5FE0C00134B}"
+	ProjectSection(SolutionItems) = preProject
+		\\172.16.45.1\学生共有\#infosys2022\オブジェクト指向プログラミング\３期目\天気アプリ\areacode.csv = \\172.16.45.1\学生共有\#infosys2022\オブジェクト指向プログラミング\３期目\天気アプリ\areacode.csv
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise01", "Chapter06\Exercise01\Exercise01.csproj", "{92052F1B-7979-4C5D-9F35-C60F486F928F}"
 EndProject

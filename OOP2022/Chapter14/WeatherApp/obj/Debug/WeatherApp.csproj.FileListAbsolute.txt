@@ -11,3 +11,4 @@ C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter14\WeatherApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter14\WeatherApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter14\WeatherApp\obj\Debug\WeatherApp.csproj.CopyComplete
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter14\WeatherApp\bin\Debug\areacode.csv
