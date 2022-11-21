@@ -13,18 +13,19 @@ namespace WeatherApp {
 			_regions = ReadRegions(filePath);
 		}
 
-		/*public IDictionary<string,string> keyValuePairs() {
+		public IDictionary<string,string> keyValuePairs() {
 			var dict = new Dictionary<string,string>();
-			foreach(var region in _regions) {
-				return region.AreaCode;
+			foreach (var region in _regions) {
+				dict[region.State] = region.AreaCode;
 			}
-		}*/
+			return dict;
+		}
 
 		public static IEnumerable<Region> ReadRegions(string filepath) {
-			List<Region> regions = new List<Region>();
-			string[] lines = File.ReadAllLines(filepath);
+			var regions = new List<Region>();
+			var lines = File.ReadAllLines(filepath);
 			foreach (var line in lines) {
-				string[] items = line.Split(',');
+				var items = line.Split(',');
 				Region region = new Region {
 					State = items[0],
 					AreaCode = items[1]
