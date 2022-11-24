@@ -1,0 +1,7 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\bin\Release\Sample.xml
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\bin\Release\Exercise1.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\bin\Release\Exercise1.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\bin\Release\Exercise1.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\obj\Release\Exercise1.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\obj\Release\Exercise1.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter11\Exercise1\obj\Release\Exercise1.pdb

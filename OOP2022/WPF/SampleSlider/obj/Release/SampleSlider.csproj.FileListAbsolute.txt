@@ -1,0 +1,15 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\bin\Release\SampleSlider.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\bin\Release\SampleSlider.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\bin\Release\SampleSlider.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\MainWindow.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\App.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider_MarkupCompile.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider_MarkupCompile.lref
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\MainWindow.baml
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.g.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleSlider\obj\Release\SampleSlider.pdb

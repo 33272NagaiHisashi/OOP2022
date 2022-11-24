@@ -1,0 +1,7 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\bin\Release\Sales.csv
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\bin\Release\SalesCalculator.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\bin\Release\SalesCalculator.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\bin\Release\SalesCalculator.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\obj\Release\SalesCalculator.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\obj\Release\SalesCalculator.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\Chapter02\SalesCalculator\obj\Release\SalesCalculator.pdb

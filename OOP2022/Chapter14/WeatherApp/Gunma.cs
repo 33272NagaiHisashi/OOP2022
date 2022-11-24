@@ -15,6 +15,7 @@ namespace WeatherApp {
 		public Timesery[] timeSeries { get; set; }
 		public Tempaverage tempAverage { get; set; }
 		public Precipaverage precipAverage { get; set; }
+
 	}
 
 	public class Tempaverage {
@@ -73,4 +74,11 @@ namespace WeatherApp {
 		public string code { get; set; }
 	}
 
+	public class Area6 {
+		public string publishingOffice { get; set; }
+		public DateTime reportDatetime { get; set; }
+		public string targetArea { get; set; }
+		public string headlineText { get; set; }
+		public string text { get; set; }
+	}
 }

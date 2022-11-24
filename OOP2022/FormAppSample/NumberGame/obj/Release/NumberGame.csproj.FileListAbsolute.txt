@@ -1,0 +1,10 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\bin\Release\NumberGame.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\bin\Release\NumberGame.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\bin\Release\NumberGame.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.Form1.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\FormAppSample\NumberGame\obj\Release\NumberGame.pdb

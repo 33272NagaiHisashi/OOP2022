@@ -1,0 +1,16 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\bin\Release\SampleUnitConverter.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\bin\Release\SampleUnitConverter.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\bin\Release\SampleUnitConverter.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\MainWindow.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\App.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter_MarkupCompile.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter_MarkupCompile.lref
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\MainWindow.baml
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.g.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\SampleUnitConverter\obj\Release\SampleUnitConverter.pdb

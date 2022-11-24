@@ -1,0 +1,15 @@
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\bin\Release\ColorChecker.exe.config
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\bin\Release\ColorChecker.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\bin\Release\ColorChecker.pdb
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.csproj.AssemblyReference.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\MainWindow.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\App.g.cs
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker_MarkupCompile.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker_MarkupCompile.lref
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\MainWindow.baml
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.g.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.Properties.Resources.resources
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.csproj.GenerateResource.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.csproj.CoreCompileInputs.cache
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.exe
+C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\33272NagaiHisashi\OOP2022\WPF\ColorChecker\obj\Release\ColorChecker.pdb
