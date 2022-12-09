@@ -1,0 +1,16 @@
+﻿<Window x:Class="SearchCafeSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SearchCafeSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="店名検索" HorizontalAlignment="Left" Margin="90,135,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <Button Content="都道府県" x:Name="btPrefecture" HorizontalAlignment="Left" Margin="90,235,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="btPrefecture_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="200,25,0,0" VerticalAlignment="Top" Height="50" Width="380" Background="#FFF0A7A7"/>
+        <TextBox HorizontalAlignment="Left" Height="45" Margin="205,135,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="370"/>
+
+    </Grid>
+</Window>

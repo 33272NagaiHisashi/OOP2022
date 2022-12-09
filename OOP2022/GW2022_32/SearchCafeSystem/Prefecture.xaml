@@ -1,0 +1,217 @@
+﻿<Window x:Class="SearchCafeSystem.Prefecture"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SearchCafeSystem"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="北海道" Grid.ColumnSpan="8"/>
+            <Button x:Name="btClose" Content="X" Grid.Column="9" Click="btClose_Click"/>
+            <CheckBox Content="北海道" x:Name="cbHokkaido" Grid.Row="1" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="東北" Grid.ColumnSpan="9"/>
+            <CheckBox Content="青森" x:Name="cbAomori" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="岩手" x:Name="cbIwate" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="秋田" x:Name="cbAkita" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="宮城" x:Name="cbMiyagi" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            <CheckBox Content="山形" x:Name="cbYamagata" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            <CheckBox Content="福島" x:Name="cbFukushima" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="関東" Grid.ColumnSpan="9"/>
+            <CheckBox Content="茨城" x:Name="cbIbaraki" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="栃木" x:Name="cbTochigi" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="群馬" x:Name="cbGunma" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="埼玉" x:Name="cbSaitama" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            <CheckBox Content="千葉" x:Name="cbChiba" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            <CheckBox Content="東京" x:Name="cbTokyo" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center"/>
+            <CheckBox Content="神奈川" x:Name="cbKanagawa" Grid.Row="1" Grid.Column="6" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="東海" Grid.ColumnSpan="9"/>
+            <CheckBox Content="新潟" x:Name="cbNiigata" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="富山" x:Name="cbToyama" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="石川" x:Name="cbIshikawa" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="福井" x:Name="cbFukui" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            <CheckBox Content="山梨" x:Name="cbYamanashi" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            <CheckBox Content="長野" x:Name="cbNagano"  Grid.Row="1" Grid.Column="5" VerticalAlignment="Center"/>
+            <CheckBox Content="岐阜" x:Name="cbGifu" Grid.Row="1" Grid.Column="6" VerticalAlignment="Center"/>
+            <CheckBox Content="静岡" x:Name="cbShizuoka" Grid.Row="1" Grid.Column="7" VerticalAlignment="Center"/>
+            <CheckBox Content="愛知" x:Name="cbAichi" Grid.Row="1" Grid.Column="8" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="近畿" Grid.ColumnSpan="9"/>
+            <CheckBox Content="滋賀" x:Name="cbShiga" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="三重" x:Name="cbMie" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="京都" x:Name="cbKyoto" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="大阪" x:Name="cbOsaka" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            <CheckBox Content="奈良" x:Name="cbNara" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            <CheckBox Content="和歌山" x:Name="cbWakayama" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center"/>
+            <CheckBox Content="兵庫県" x:Name="cbHyogo" Grid.Row="1" Grid.Column="6" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="中国" Grid.ColumnSpan="9"/>
+            <CheckBox Content="鳥取" x:Name="cbTottori" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="島根" x:Name="cbShimane" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="岡山" x:Name="cbOkayama" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="広島" x:Name="cbHiroshima" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            <CheckBox Content="山口" x:Name="cbYamaguchi" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="四国" Grid.ColumnSpan="9"/>
+            <CheckBox Content="徳島" x:Name="cbTokushima" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="香川" x:Name="cbKagawa" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="愛媛" x:Name="cbEhime" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="高知" x:Name="cbKochi" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="九州" Grid.ColumnSpan="9"/>
+            <CheckBox Content="福岡" x:Name="cbFukuoka" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox Content="佐賀" x:Name="cbSaga" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <CheckBox Content="長崎" x:Name="cbNagasaki" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <CheckBox Content="大分" x:Name="cbOita" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            <CheckBox Content="熊本" x:Name="cbKumamoto" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center"/>
+            <CheckBox Content="宮崎" x:Name="cbMiyasaki" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center"/>
+            <CheckBox Content="鹿児島" x:Name="cbKagoshima" Grid.Row="1" Grid.Column="6" VerticalAlignment="Center"/>
+            <CheckBox Content="沖縄" x:Name="cbOkinawa" Grid.Row="1" Grid.Column="7" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="9">
+            <Button Content="Button" Name="tbAcquisition" Click="tbAcquisition_Click"/>
+        </Grid>
+    </Grid>
+</Window>

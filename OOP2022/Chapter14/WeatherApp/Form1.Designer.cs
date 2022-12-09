@@ -37,11 +37,11 @@ namespace WeatherApp {
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.tbTodayMaxT = new System.Windows.Forms.TextBox();
-			this.tbTodayLowMin = new System.Windows.Forms.TextBox();
-			this.tb = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.tbTodayMinT = new System.Windows.Forms.TextBox();
+			this.tbTomorrowMaxT = new System.Windows.Forms.TextBox();
+			this.tbTomorrowMinT = new System.Windows.Forms.TextBox();
+			this.tbAssateMaxT = new System.Windows.Forms.TextBox();
+			this.tbAssateMinT = new System.Windows.Forms.TextBox();
 			this.cbArea = new System.Windows.Forms.ComboBox();
 			this.labe1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pbTomorrow)).BeginInit();
@@ -157,43 +157,49 @@ namespace WeatherApp {
 			// 
 			this.tbTodayMaxT.Location = new System.Drawing.Point(299, 179);
 			this.tbTodayMaxT.Name = "tbTodayMaxT";
+			this.tbTodayMaxT.ReadOnly = true;
 			this.tbTodayMaxT.Size = new System.Drawing.Size(93, 20);
 			this.tbTodayMaxT.TabIndex = 19;
 			// 
-			// tbTodayLowMin
+			// tbTodayMinT
 			// 
-			this.tbTodayLowMin.Location = new System.Drawing.Point(299, 234);
-			this.tbTodayLowMin.Name = "tbTodayLowMin";
-			this.tbTodayLowMin.Size = new System.Drawing.Size(93, 20);
-			this.tbTodayLowMin.TabIndex = 20;
+			this.tbTodayMinT.Location = new System.Drawing.Point(299, 234);
+			this.tbTodayMinT.Name = "tbTodayMinT";
+			this.tbTodayMinT.ReadOnly = true;
+			this.tbTodayMinT.Size = new System.Drawing.Size(93, 20);
+			this.tbTodayMinT.TabIndex = 20;
 			// 
-			// tb
+			// tbTomorrowMaxT
 			// 
-			this.tb.Location = new System.Drawing.Point(428, 179);
-			this.tb.Name = "tb";
-			this.tb.Size = new System.Drawing.Size(93, 20);
-			this.tb.TabIndex = 21;
+			this.tbTomorrowMaxT.Location = new System.Drawing.Point(428, 179);
+			this.tbTomorrowMaxT.Name = "tbTomorrowMaxT";
+			this.tbTomorrowMaxT.ReadOnly = true;
+			this.tbTomorrowMaxT.Size = new System.Drawing.Size(93, 20);
+			this.tbTomorrowMaxT.TabIndex = 21;
 			// 
-			// textBox4
+			// tbTomorrowMinT
 			// 
-			this.textBox4.Location = new System.Drawing.Point(428, 234);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(93, 20);
-			this.textBox4.TabIndex = 22;
+			this.tbTomorrowMinT.Location = new System.Drawing.Point(428, 234);
+			this.tbTomorrowMinT.Name = "tbTomorrowMinT";
+			this.tbTomorrowMinT.ReadOnly = true;
+			this.tbTomorrowMinT.Size = new System.Drawing.Size(93, 20);
+			this.tbTomorrowMinT.TabIndex = 22;
 			// 
-			// textBox5
+			// tbAssateMaxT
 			// 
-			this.textBox5.Location = new System.Drawing.Point(555, 183);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(93, 20);
-			this.textBox5.TabIndex = 23;
+			this.tbAssateMaxT.Location = new System.Drawing.Point(555, 183);
+			this.tbAssateMaxT.Name = "tbAssateMaxT";
+			this.tbAssateMaxT.ReadOnly = true;
+			this.tbAssateMaxT.Size = new System.Drawing.Size(93, 20);
+			this.tbAssateMaxT.TabIndex = 23;
 			// 
-			// textBox6
+			// tbAssateMinT
 			// 
-			this.textBox6.Location = new System.Drawing.Point(555, 234);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(94, 20);
-			this.textBox6.TabIndex = 24;
+			this.tbAssateMinT.Location = new System.Drawing.Point(555, 234);
+			this.tbAssateMinT.Name = "tbAssateMinT";
+			this.tbAssateMinT.ReadOnly = true;
+			this.tbAssateMinT.Size = new System.Drawing.Size(94, 20);
+			this.tbAssateMinT.TabIndex = 24;
 			// 
 			// cbArea
 			// 
@@ -220,11 +226,11 @@ namespace WeatherApp {
 			this.ClientSize = new System.Drawing.Size(664, 457);
 			this.Controls.Add(this.labe1);
 			this.Controls.Add(this.cbArea);
-			this.Controls.Add(this.textBox6);
-			this.Controls.Add(this.textBox5);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.tb);
-			this.Controls.Add(this.tbTodayLowMin);
+			this.Controls.Add(this.tbAssateMinT);
+			this.Controls.Add(this.tbAssateMaxT);
+			this.Controls.Add(this.tbTomorrowMinT);
+			this.Controls.Add(this.tbTomorrowMaxT);
+			this.Controls.Add(this.tbTodayMinT);
 			this.Controls.Add(this.tbTodayMaxT);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.label7);
@@ -264,11 +270,11 @@ namespace WeatherApp {
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox tbTodayMaxT;
-		private System.Windows.Forms.TextBox tbTodayLowMin;
-		private System.Windows.Forms.TextBox tb;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox tbTodayMinT;
+		private System.Windows.Forms.TextBox tbTomorrowMaxT;
+		private System.Windows.Forms.TextBox tbTomorrowMinT;
+		private System.Windows.Forms.TextBox tbAssateMaxT;
+		private System.Windows.Forms.TextBox tbAssateMinT;
 		private System.Windows.Forms.ComboBox cbArea;
 		private System.Windows.Forms.Label labe1;
 	}
