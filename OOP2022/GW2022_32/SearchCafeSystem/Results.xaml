@@ -1,0 +1,37 @@
+﻿<Window x:Class="SearchCafeSystem.Results"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SearchCafeSystem"
+        mc:Ignorable="d"
+        Title="Results" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <Button Content="メニュー" x:Name="tbMenu" Click="tbMenu_Click"/>
+        <Button Content="サービス" x:Name="btServices" Grid.Column="7"/>
+        <Grid Grid.Row="1" Grid.RowSpan="8" Grid.ColumnSpan="8">
+            <DataGrid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="DataGrid_SelectionChanged"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -16,9 +16,19 @@ namespace SearchCafeSystem {
 	/// <summary>
 	/// Window1.xaml の相互作用ロジック
 	/// </summary>
-	public partial class Window1 : Window {
-		public Window1() {
+	public partial class Results : Window {
+		public Results() {
 			InitializeComponent();
+		}
+
+		private void tbMenu_Click(object sender, RoutedEventArgs e) {
+			MainWindow mainWindow = new MainWindow();
+			mainWindow.Show();
+			this.Close();
+		}
+
+		private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
 		}
 	}
 }

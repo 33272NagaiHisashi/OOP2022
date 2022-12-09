@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "FhTIF8I8MpJ7S5vkjOurR/iX8mF/APBEayNcHqs6ec2k10rJJMsVL2Mp/Olfbb4O4LLwMtX+H2xMwysqw9pNMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\infosys\\OneDrive - 学校法人太田アカデミー\\デスクトップ\\33272NagaiHisashi\\OOP2022\\GW2022_32\\SearchCafeSystem\\SearchCafeSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\infosys\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.25247-preview\\microsoft.windows.sdk.contracts.10.0.25247-preview.nupkg.sha512",
+    "C:\\Users\\infosys\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\infosys\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\infosys\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

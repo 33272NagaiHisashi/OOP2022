@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\infosys\\OneDrive - 学校法人太田アカデミー\\デスクトップ\\33272NagaiHisashi\\OOP2022\\GW2022_32\\SearchCafeSystem\\SearchCafeSystem.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\infosys\\OneDrive - 学校法人太田アカデミー\\デスクトップ\\33272NagaiHisashi\\OOP2022\\GW2022_32\\SearchCafeSystem\\SearchCafeSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\infosys\\OneDrive - 学校法人太田アカデミー\\デスクトップ\\33272NagaiHisashi\\OOP2022\\GW2022_32\\SearchCafeSystem\\SearchCafeSystem.csproj",
+        "projectName": "SearchCafeSystem",
+        "projectPath": "C:\\Users\\infosys\\OneDrive - 学校法人太田アカデミー\\デスクトップ\\33272NagaiHisashi\\OOP2022\\GW2022_32\\SearchCafeSystem\\SearchCafeSystem.csproj",
+        "packagesPath": "C:\\Users\\infosys\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\infosys\\OneDrive - 学校法人太田アカデミー\\デスクトップ\\33272NagaiHisashi\\OOP2022\\GW2022_32\\SearchCafeSystem\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\infosys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.Windows.SDK.Contracts": {
+              "target": "Package",
+              "version": "[10.0.25247-preview, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Label Content="北海道" Grid.ColumnSpan="8"/>
-            <Button x:Name="btClose" Content="X" Grid.Column="9" Click="btClose_Click"/>
+            <Button x:Name="btClose" Content="X" Grid.Column="9"/>
             <CheckBox Content="北海道" x:Name="cbHokkaido" Grid.Row="1" VerticalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">

@@ -164,6 +164,8 @@ namespace SearchCafeSystem {
 			if (cbOkinawa.IsChecked == true) {
 				checkedListBox.Add(cbOkinawa.Content.ToString());
 			}
+			Results results = new Results();
+			results.Show();
 			this.Close();
 		}
 
